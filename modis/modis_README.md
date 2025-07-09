@@ -224,7 +224,7 @@ The framework includes a unified configuration file (`modis_consolidated_config.
 ./modis_process_generic.sh --create-config-template my_config.json
 
 # Edit the configuration
-vim my_config.json
+nano my_config.json
 
 # Use custom configuration
 ./modis_process_generic.sh --variable NDVI --input-dir ./data/raw/NDVI/ --output-dir ./data/proc/NDVI/ --date 2020-01-01 --config my_config.json

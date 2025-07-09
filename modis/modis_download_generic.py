@@ -14,7 +14,7 @@ Requirements:
 - EARTHDATA_BEARER_TOKEN environment variable
 
 Author: GEOSPACE Project
-Date: 2025
+Date: July 2025
 License: Public Domain
 
 Usage:

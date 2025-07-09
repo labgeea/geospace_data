@@ -81,20 +81,20 @@ geospace/
 ├── version.py                    # Central version management
 ├── README.md                     # This file
 ├── CHANGELOG.md                  # Version history
-├── modis/                        # MODIS satellite data tools
+├── modis/                        # MODIS data tools
 │   ├── modis_download_generic.py
 │   ├── modis_download_generic.sh
 │   ├── modis_process_generic.py
 │   ├── modis_process_generic.sh
 │   ├── modis_proc_config.json
 │   └── modis_README.md
-├── ecmwf/                        # ECMWF reanalysis tools
+├── ecmwf/                        # ECMWF data tools
 │   ├── era5_download_generic.py
 │   ├── era5_download_generic.sh
 │   ├── era5_process_generic.py
 │   ├── era5_process_generic.sh
 │   └── era5_README.md
-└── gridmet/                      # GridMET meteorological tools
+└── gridmet/                      # GridMET data tools
     ├── gridmet_download_generic.py
     ├── gridmet_download_generic.sh
     ├── gridmet_process_generic.py

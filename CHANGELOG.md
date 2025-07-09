@@ -6,23 +6,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
 ### Added
-
 ### Changed
-
 ### Deprecated
-
 ### Removed
-
 ### Fixed
-
 ### Security
 
-## [1.0.0] - 2025-07-08
-
+## [1.0.1] - 2025-07-09
 ### Added
+- DEVELOPMENT_WORKFLOW.md
+  - Document semantic versioning process
+  - Include step-by-step release workflow
+  - Add guidelines for adding new modules
+  - Provide troubleshooting and best practices
+- VARIABLE_CATALOG.md
+  - Document all 22+ variables across MODIS, ECMWF, and GridMET modules
+  - Include technical specifications, usage examples, and processing details
+  - Add variable packages and quality control information
+  - Provide complete reference for framework capabilities
 
+### Changed
+- README.md
+  - Added comments to directory structure description for readability
+- modis_README.md
+  - Changed default editor: vim --> nano
+- modis_download_generic.py
+  - Added month to date field (2025 --> July 2025)
+
+## [1.0.0] - 2025-07-08
+### Added
 - Initial stable release of GEOSPACE Geospatial Metadatabase Project Framework
 - MODIS module with support for:
   - Vegetation indices (NDVI, EVI) from MOD13/MYD13 products
@@ -44,32 +57,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Example workflows and troubleshooting guides
 - Automated testing framework
 - Cross-platform compatibility (Linux, macOS, Windows/WSL)
-
-### Technical Details
-
-- Python 3.8+ compatibility
-- GDAL/OGR integration for spatial processing
+- Python 3.8+ compatibility with GDAL/OGR integration
 - XArray/Rasterio for efficient data handling
 - Parallel downloading capabilities
 - Memory-efficient processing for large datasets
 - Configurable quality control parameters
 - Support for multiple output formats (GeoTIFF, NetCDF)
-
-### Data Sources
-
 - NASA Earthdata integration for MODIS products
 - Copernicus Climate Data Store integration for ECMWF data
 - University of Idaho GridMET data access
 - Automated authentication handling
 - Robust error handling and retry mechanisms
-
-### Performance
-
-- Optimized for CONUS-scale processing
+- Optimized performance for CONUS-scale processing
 - Configurable parallel processing
 - Efficient memory management
 - Tile-based processing for large datasets
 - Compression and chunking optimizations
 
-[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/sandbox-msh/geospace_data/releases/tag/v1.0.0
