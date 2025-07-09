@@ -1,0 +1,393 @@
+{
+  "version": "1.0.0",
+  "config_schema_version": "1.0",
+  "last_updated": "2025-07-08",
+  "description": "MODIS processing configuration for GEOSPACE framework",
+  "framework_compatibility": "1.0.0",
+  "product_configs": {
+    "MOD11A1": {
+      "grid_name": "MODIS_Grid_Daily_1km_LST",
+      "variables": {
+        "LST_Day": {
+          "sds_name": "LST_Day_1km",
+          "scale_factor": 0.02,
+          "add_offset": 0.0,
+          "valid_range": [
+            7500,
+            65535
+          ],
+          "fill_value": 0,
+          "units": "Kelvin",
+          "convert_to_celsius": true,
+          "qc_sds": "QC_Day"
+        },
+        "LST_Night": {
+          "sds_name": "LST_Night_1km",
+          "scale_factor": 0.02,
+          "add_offset": 0.0,
+          "valid_range": [
+            7500,
+            65535
+          ],
+          "fill_value": 0,
+          "units": "Kelvin",
+          "convert_to_celsius": true,
+          "qc_sds": "QC_Night"
+        }
+      },
+      "temporal_resolution": "daily",
+      "spatial_resolution": 1000
+    },
+    "MYD11A1": {
+      "grid_name": "MODIS_Grid_Daily_1km_LST",
+      "variables": {
+        "LST_Day": {
+          "sds_name": "LST_Day_1km",
+          "scale_factor": 0.02,
+          "add_offset": 0.0,
+          "valid_range": [
+            7500,
+            65535
+          ],
+          "fill_value": 0,
+          "units": "Kelvin",
+          "convert_to_celsius": true,
+          "qc_sds": "QC_Day"
+        },
+        "LST_Night": {
+          "sds_name": "LST_Night_1km",
+          "scale_factor": 0.02,
+          "add_offset": 0.0,
+          "valid_range": [
+            7500,
+            65535
+          ],
+          "fill_value": 0,
+          "units": "Kelvin",
+          "convert_to_celsius": true,
+          "qc_sds": "QC_Night"
+        }
+      },
+      "temporal_resolution": "daily",
+      "spatial_resolution": 1000
+    },
+    "MOD13A1": {
+      "grid_name": "MOD_Grid_16DAY_500m_VI",
+      "variables": {
+        "NDVI": {
+          "sds_name": "500m 16 days NDVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "500m 16 days VI Quality"
+        },
+        "EVI": {
+          "sds_name": "500m 16 days EVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "500m 16 days VI Quality"
+        }
+      },
+      "temporal_resolution": "16-day",
+      "spatial_resolution": 500
+    },
+    "MOD13A2": {
+      "grid_name": "MODIS_Grid_16DAY_1km_VI",
+      "variables": {
+        "NDVI": {
+          "sds_name": "1 km 16 days NDVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km 16 days VI Quality"
+        },
+        "EVI": {
+          "sds_name": "1 km 16 days EVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km 16 days VI Quality"
+        }
+      },
+      "temporal_resolution": "16-day",
+      "spatial_resolution": 1000
+    },
+    "MOD13A3": {
+      "grid_name": "MOD_Grid_monthly_1km_VI",
+      "variables": {
+        "NDVI": {
+          "sds_name": "1 km monthly NDVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km monthly VI Quality"
+        },
+        "EVI": {
+          "sds_name": "1 km monthly EVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km monthly VI Quality"
+        }
+      },
+      "temporal_resolution": "monthly",
+      "spatial_resolution": 1000
+    },
+    "MYD13A1": {
+      "grid_name": "MOD_Grid_16DAY_500m_VI",
+      "variables": {
+        "NDVI": {
+          "sds_name": "500m 16 days NDVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "500m 16 days VI Quality"
+        },
+        "EVI": {
+          "sds_name": "500m 16 days EVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "500m 16 days VI Quality"
+        }
+      },
+      "temporal_resolution": "16-day",
+      "spatial_resolution": 500
+    },
+    "MYD13A2": {
+      "grid_name": "MODIS_Grid_16DAY_1km_VI",
+      "variables": {
+        "NDVI": {
+          "sds_name": "1 km 16 days NDVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km 16 days VI Quality"
+        },
+        "EVI": {
+          "sds_name": "1 km 16 days EVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km 16 days VI Quality"
+        }
+      },
+      "temporal_resolution": "16-day",
+      "spatial_resolution": 1000
+    },
+    "MYD13A3": {
+      "grid_name": "MOD_Grid_monthly_1km_VI",
+      "variables": {
+        "NDVI": {
+          "sds_name": "1 km monthly NDVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km monthly VI Quality"
+        },
+        "EVI": {
+          "sds_name": "1 km monthly EVI",
+          "scale_factor": 0.0001,
+          "valid_range": [
+            -2000,
+            10000
+          ],
+          "fill_value": -3000,
+          "units": "dimensionless",
+          "qc_sds": "1 km monthly VI Quality"
+        }
+      },
+      "temporal_resolution": "monthly",
+      "spatial_resolution": 1000
+    },
+    "MOD44B": {
+      "grid_name": "MOD44B_250m_GRID",
+      "variables": {
+        "Percent_Tree_Cover": {
+          "sds_name": "Percent_Tree_Cover",
+          "scale_factor": 1.0,
+          "valid_range": [
+            0,
+            100
+          ],
+          "fill_value": 200,
+          "units": "percent",
+          "qc_sds": "Quality"
+        },
+        "Percent_NonTree_Vegetation": {
+          "sds_name": "Percent_NonTree_Vegetation",
+          "scale_factor": 1.0,
+          "valid_range": [
+            0,
+            100
+          ],
+          "fill_value": 200,
+          "units": "percent",
+          "qc_sds": "Quality"
+        },
+        "Percent_NonVegetated": {
+          "sds_name": "Percent_NonVegetated",
+          "scale_factor": 1.0,
+          "valid_range": [
+            0,
+            100
+          ],
+          "fill_value": 200,
+          "units": "percent",
+          "qc_sds": "Quality"
+        }
+      },
+      "temporal_resolution": "annual",
+      "spatial_resolution": 250
+    },
+    "MYD44B": {
+      "grid_name": "MOD44B_250m_GRID",
+      "variables": {
+        "Percent_Tree_Cover": {
+          "sds_name": "Percent_Tree_Cover",
+          "scale_factor": 1.0,
+          "valid_range": [
+            0,
+            100
+          ],
+          "fill_value": 200,
+          "units": "percent",
+          "qc_sds": "Quality"
+        },
+        "Percent_NonTree_Vegetation": {
+          "sds_name": "Percent_NonTree_Vegetation",
+          "scale_factor": 1.0,
+          "valid_range": [
+            0,
+            100
+          ],
+          "fill_value": 200,
+          "units": "percent",
+          "qc_sds": "Quality"
+        },
+        "Percent_NonVegetated": {
+          "sds_name": "Percent_NonVegetated",
+          "scale_factor": 1.0,
+          "valid_range": [
+            0,
+            100
+          ],
+          "fill_value": 200,
+          "units": "percent",
+          "qc_sds": "Quality"
+        }
+      },
+      "temporal_resolution": "annual",
+      "spatial_resolution": 250
+    }
+  },
+  "processing": {
+    "default_nodata": -9999.0,
+    "target_crs": "EPSG:5070",
+    "target_resolution": 250,
+    "resampling_method": "bilinear",
+    "output_format": "GeoTIFF",
+    "compression": "lzw",
+    "tiled": true,
+    "blocksize": 256
+  },
+  "quality_masks": {
+    "MOD11_QC": {
+      "mandatory_qa_bits": [
+        0,
+        1
+      ],
+      "good_quality_values": [
+        0
+      ],
+      "data_quality_bits": [
+        2,
+        3
+      ],
+      "error_bits": [
+        6,
+        7
+      ]
+    },
+    "MOD13_VI_Quality": {
+      "modland_qa_bits": [
+        0,
+        1
+      ],
+      "good_quality_values": [
+        0
+      ],
+      "vi_usefulness_bits": [
+        2,
+        5
+      ],
+      "aerosol_bits": [
+        6,
+        7
+      ],
+      "cloud_bits": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "MOD44_Quality": {
+      "good_quality_values": [
+        0,
+        1
+      ],
+      "fill_values": [
+        200,
+        253,
+        254,
+        255
+      ]
+    }
+  }
+}
