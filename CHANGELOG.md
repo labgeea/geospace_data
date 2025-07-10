@@ -13,6 +13,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [1.1.0] - 2025-07-10
+### Added
+- CMR API integration for MODIS downloads
+- Enhanced error handling and metadata access
+- Cloud-ready infrastructure support
+
+### Changed
+- MODIS download backend migrated from LP DAAC Data Pool to CMR API
+- ECMWF download script had incorrect variable option (specific humidity)
+- Improved reliability and performance for MODIS data access
+- VARIABLE CATALOG updated with additional variables
+  - Updated variable counts: MODIS (4), ECMWF (14), GridMET (17)
+
+### Deprecated
+- LP DAAC Data Pool access (retired by NASA on June 30, 2025)
+
+### Removed
+- Remove specific humidity (sp) in ECMWF download script and bash wrapper
+
 ## [1.0.1] - 2025-07-09
 ### Added
 - DEVELOPMENT_WORKFLOW.md
@@ -74,6 +93,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tile-based processing for large datasets
 - Compression and chunking optimizations
 
-[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/sandbox-msh/geospace_data/releases/tag/v1.0.0

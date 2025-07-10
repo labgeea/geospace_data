@@ -4,7 +4,7 @@ GEOSPACE Framework Version Management
 Central version file for all modules
 """
 
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 __author__ = "GEOSPACE Project"
 __license__ = "Public Domain"
 __description__ = "Comprehensive framework for downloading and processing satellite and climate data"

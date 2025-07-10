@@ -102,9 +102,6 @@ VARIABLE_MAPPING = {
     
     'geopotential': 'geopotential',
     'z': 'geopotential',
-    
-    'specific_humidity': 'specific_humidity',
-    'q': 'specific_humidity',
 }
 
 def setup_cds_client():

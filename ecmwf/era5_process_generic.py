@@ -205,16 +205,6 @@ VARIABLE_CONFIG = {
         'valid_range': (-500, 8000),  # m
         'nodata_value': -9999.0,
         'dtype': 'float32'
-    },
-    'specific_humidity': {
-        'name': 'q',    # Common ERA5 variable name in NetCDF (often at pressure levels)
-        'unit_conversion': 'kg_per_kg_to_g_per_kg',
-        'output_unit': 'g/kg',
-        'long_name': 'specific humidity',
-        'standard_name': 'specific_humidity',
-        'valid_range': (0, 30),  # g/kg
-        'nodata_value': -9999.0,
-        'dtype': 'float32'
     }
 }
 
