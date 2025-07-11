@@ -13,6 +13,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [1.2.0] - 2025-07-11
+### Added
+- Comprehensive metadata catalog system with 35 documented variables
+- CSV-based catalog for version control and collaboration
+- Automated Excel conversion script for Zenodo publishing
+- Git-friendly catalog management with automated Excel generation
+- Updated catalog with version-specific GitHub URLs
+- Complete documentation for MODIS (4), ECMWF (14), and GridMET (17) variables
+- Version tracking, script aliases, and processing status fields
+- CATALOG_README.md with workflow documentation
+
+### Changed
+- All GitHub links in metadata now point to version-specific URLs (v1.2.0)
+- Enhanced project documentation and citation capabilities
+
 ## [1.1.0] - 2025-07-10
 ### Added
 - CMR API integration for MODIS downloads
@@ -93,7 +108,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tile-based processing for large datasets
 - Compression and chunking optimizations
 
-[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/sandbox-msh/geospace_data/releases/tag/v1.0.0
