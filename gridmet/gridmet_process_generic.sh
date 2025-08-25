@@ -17,7 +17,7 @@
 # License: Public Domain
 
 # Version information
-VERSION="1.0.0"
+VERSION="1.3.0"
 MODULE_NAME="GridMET Processing"
 
 # Version display function
