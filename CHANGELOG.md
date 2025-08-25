@@ -13,6 +13,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+
+## [1.3.0] - 2025-08-25
+### Added
+- **CAMS module** for air pollution variables  
+  - Support for PM2.5, PM10, NO₂, SO₂, O₃, and CO  
+  - Automated ADS API download framework with variable groups (`air_quality`, `particulates`, `trace_gases`)  
+  - End-to-end processing (NetCDF → GeoTIFF/NetCDF) with unit conversions and spatial reprojection  
+  - Support for single variables, variable groups, and time-series stack creation  
+  - Daily and monthly aggregation options  
+  - Expanded processing options:  
+    - Time-series stack creation (`--create-stacks`)  
+    - Flexible temporal aggregation (`hourly`, `daily`, `monthly`)  
+    - CRS customization (`--target-crs`)  
+  - Enhanced troubleshooting and debugging guides in CAMS README
+
+### Changed
+- Updated **variable catalog** to include CAMS module (6 new variables, total now 41 across 4 modules)
+- Catalog version bumped to **v1.2.0 → v1.3.0**  
+- Documentation updated with CAMS framework overview, usage examples, and workflow diagrams
+
 ## [1.2.0] - 2025-07-11
 ### Added
 - Comprehensive metadata catalog system with 35 documented variables
@@ -108,7 +128,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tile-based processing for large datasets
 - Compression and chunking optimizations
 
-[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/sandbox-msh/geospace_data/compare/v1.0.0...v1.0.1

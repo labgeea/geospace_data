@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.0.0  
+**Version:** 1.3.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -13,6 +13,7 @@ The GEOSPACE project provides metadata and unified tools for accessing and proce
 - **MODIS** - Moderate Resolution Imaging Spectroradiometer satellite data
 - **ECMWF** - European Centre for Medium-Range Weather Forecasts reanalysis data  
 - **GridMET** - Gridded meteorological data for the United States
+- **CAMS** - Copernicus Atmosphere Monitoring Service air pollution data
 
 ## Quick Start
 
@@ -34,15 +35,21 @@ cd ecmwf/
 cd gridmet/
 ./gridmet_download_generic.sh --variables precipitation --year 2020 --month 1 --output-dir ./data/raw/
 ./gridmet_process_generic.sh --variable precipitation --input-dir ./data/raw/ --output-dir ./data/proc/ --date 2020-01-01
+
+# CAMS example
+cd cams/
+./cams_download_generic.sh --variables pm25 --year 2020 --month 1 --output-dir ./data/raw/
+./cams_process_generic.sh --input-file cams_pm25_202001.nc --output-dir ./data/proc/ --variables pm25
 ```
 
 ## Modules
 
 | Module | Description | Version | Documentation |
 |--------|-------------|---------|---------------|
-| **MODIS** | Satellite vegetation indices, land surface temperature, forest cover | 1.0.0 | [modis/modis_README.md](modis/modis_README.md) |
-| **ECMWF** | ERA5 reanalysis weather and climate data | 1.0.0 | [ecmwf/era5_README.md](ecmwf/era5_README.md) |
-| **GridMET** | High-resolution meteorological data for CONUS | 1.0.0 | [gridmet/gridmet_README.md](gridmet/gridmet_README.md) |
+| **MODIS** | Satellite vegetation indices, land surface temperature, forest cover | 1.2.0 | [modis/modis_README.md](modis/modis_README.md) |
+| **ECMWF** | ERA5 reanalysis weather and climate data | 1.2.0 | [ecmwf/era5_README.md](ecmwf/era5_README.md) |
+| **GridMET** | High-resolution meteorological data for CONUS | 1.2.0 | [gridmet/gridmet_README.md](gridmet/gridmet_README.md) |
+| **CAMS** | Air pollution data from Copernicus Atmosphere Monitoring Service | 1.3.0 | [cams/cams_README.md](cams/cams_README.md) |
 
 ## Installation
 
@@ -73,6 +80,7 @@ The framework interfaces with official data providers:
 - **NASA Earthdata** (MODIS) - Requires free registration
 - **Copernicus Climate Data Store** (ECMWF) - Requires free registration  
 - **University of Idaho** (GridMET) - Open access
+- **Copernicus Atmosphere Monitoring Service** (CAMS) - Open access
 
 ## Directory Structure
 
@@ -94,6 +102,12 @@ geospace/
 │   ├── era5_process_generic.py
 │   ├── era5_process_generic.sh
 │   └── era5_README.md
+├── cams/                         # CAMS data tools
+│   ├── cams_download_generic.py
+│   ├── cams_download_generic.sh
+│   ├── cams_process_generic.py
+│   ├── cams_process_generic.sh
+│   └── cams_README.md
 └── gridmet/                      # GridMET data tools
     ├── gridmet_download_generic.py
     ├── gridmet_download_generic.sh
@@ -136,6 +150,6 @@ This framework is released under the Public Domain license. Individual component
 
 ---
 
-**Current Version:** 1.0.0  
-**Last Updated:** July 2025  
+**Current Version:** 1.3.0  
+**Last Updated:** August 2025  
 **Framework Status:** Stable Release

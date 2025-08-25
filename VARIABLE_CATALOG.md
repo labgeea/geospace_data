@@ -1,6 +1,6 @@
 # GEOSPACE Variable Catalog
 
-**Version:** 1.1.0 | **Last Updated:** July 10, 2025
+**Version:** 1.3.0 | **Last Updated:** August 25, 2025
 
 Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
@@ -11,6 +11,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **MODIS** | 4 variables | 250m-1km | Daily-Annual | NASA Satellites |
 | **ECMWF** | 14 variables | 31km | Hourly | ERA5 Reanalysis |
 | **GridMET** | 17 variables | 4km | Daily | University of Idaho |
+| **CAMS**   | 6 variables | ~80km (0.75°)    | Hourly–Daily | Copernicus Atmosphere Monitoring Service (ECMWF) |
 
 ---
 
@@ -67,6 +68,19 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **Reference ET (Alfalfa)** | Daily reference evapotranspiration (alfalfa) | 4km | Daily | `etr` |
 | **Reference ET (Grass)** | Daily reference evapotranspiration (grass) | 4km | Daily | `eto` |
 | **Palmer Drought Index** | Palmer Drought Severity Index (5-day average) | 4km | Pentad | `pdsi` |
+
+---
+
+## CAMS Variables
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **PM2.5** | Fine particulate matter (≤2.5µm) mass concentration | ~80km | Hourly / Daily aggregated | `pm25` |
+| **PM10**  | Coarse particulate matter (≤10µm) mass concentration | ~80km | Hourly / Daily aggregated | `pm10` |
+| **NO₂**   | Nitrogen dioxide concentration | ~80km | Hourly / Daily aggregated | `no2` |
+| **SO₂**   | Sulfur dioxide concentration | ~80km | Hourly / Daily aggregated | `so2` |
+| **O₃**    | Ground-level ozone concentration | ~80km | Hourly / Daily aggregated | `o3` |
+| **CO**    | Carbon monoxide concentration | ~80km | Hourly / Daily aggregated | `co` |
 
 ---
 

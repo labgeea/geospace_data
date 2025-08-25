@@ -60,7 +60,7 @@ def format_excel_file(df, output_file, framework_version):
         title_format = workbook.add_format({
             'bold': True,
             'font_size': 16,
-            'align': 'center'
+            'align': 'left'
         })
         
         metadata_format = workbook.add_format({
@@ -119,7 +119,7 @@ def format_excel_file(df, output_file, framework_version):
         worksheet.set_default_row(25)
         
         print(f"✓ Created formatted Excel file: {output_file}")
-        print(f"  - {len(df)} datasets cataloged")
+        print(f"  - {len(df)} variables cataloged")
         print(f"  - {len(df.columns)} metadata fields")
 
 def validate_csv(df):
@@ -199,9 +199,9 @@ def main():
         print(f"📝 Creating Excel file: {args.output}")
         format_excel_file(df, args.output, framework_version)
         
-        print(f"\n🎉 Conversion complete!")
-        print(f"   📁 Excel file ready for Zenodo: {args.output}")
-        print(f"   🔗 All GitHub links point to v{framework_version}")
+        print(f"\n✅ File generation complete!")
+        print(f"  Excel file ready for Zenodo: {args.output}")
+        print(f"  All GitHub links point to v{framework_version}")
         
     except Exception as e:
         print(f"❌ Error: {e}")
