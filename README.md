@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.3.0  
+**Version:** 1.4.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -14,6 +14,7 @@ The GEOSPACE project provides metadata and unified tools for accessing and proce
 - **ECMWF** - European Centre for Medium-Range Weather Forecasts reanalysis data  
 - **GridMET** - Gridded meteorological data for the United States
 - **CAMS** - Copernicus Atmosphere Monitoring Service air pollution data
+- **AQS** - US Environmental Protection Agency air quality data
 
 ## Quick Start
 
@@ -40,6 +41,11 @@ cd gridmet/
 cd cams/
 ./cams_download_generic.sh --variables pm25 --year 2020 --month 1 --output-dir ./data/raw/
 ./cams_process_generic.sh --input-file cams_pm25_202001.nc --output-dir ./data/proc/ --variables pm25
+
+# AQS example
+cd aqs/
+./aqs_download_generic.sh --variables ozone --year 2020 --month 1 --output-dir ./data/raw/
+./aqs_process_generic.sh --input-file aqs_ozone_202001.nc --output-dir ./data/proc/ --variables ozone
 ```
 
 ## Modules
@@ -50,6 +56,7 @@ cd cams/
 | **ECMWF** | ERA5 reanalysis weather and climate data | 1.2.0 | [ecmwf/era5_README.md](ecmwf/era5_README.md) |
 | **GridMET** | High-resolution meteorological data for CONUS | 1.2.0 | [gridmet/gridmet_README.md](gridmet/gridmet_README.md) |
 | **CAMS** | Air pollution data from Copernicus Atmosphere Monitoring Service | 1.3.0 | [cams/cams_README.md](cams/cams_README.md) |
+| **AQS** | Air quality data from US EPA | 1.4.0 | [aqs/aqs_README.md](aqs/aqs_README.md) |
 
 ## Installation
 
@@ -81,6 +88,7 @@ The framework interfaces with official data providers:
 - **Copernicus Climate Data Store** (ECMWF) - Requires free registration  
 - **University of Idaho** (GridMET) - Open access
 - **Copernicus Atmosphere Monitoring Service** (CAMS) - Open access
+- **US EPA Air Quality System** (AQS) - Open access
 
 ## Directory Structure
 
@@ -108,12 +116,18 @@ geospace/
 │   ├── cams_process_generic.py
 │   ├── cams_process_generic.sh
 │   └── cams_README.md
-└── gridmet/                      # GridMET data tools
-    ├── gridmet_download_generic.py
-    ├── gridmet_download_generic.sh
-    ├── gridmet_process_generic.py
-    ├── gridmet_process_generic.sh
-    └── gridmet_README.md
+├── gridmet/                      # GridMET data tools
+│   ├── gridmet_download_generic.py
+│   ├── gridmet_download_generic.sh
+│   ├── gridmet_process_generic.py
+│   ├── gridmet_process_generic.sh
+│   └── gridmet_README.md
+├── aqs/                          # AQS data tools
+│   ├── aqs_download_generic.py
+│   ├── aqs_download_generic.sh
+│   ├── aqs_process_generic.py
+│   ├── aqs_process_generic.sh
+└── └── aqs_README.md
 ```
 
 ## Versioning
@@ -150,6 +164,6 @@ This framework is released under the Public Domain license. Individual component
 
 ---
 
-**Current Version:** 1.3.0  
-**Last Updated:** August 2025  
+**Current Version:** 1.4.0  
+**Last Updated:** October 2025  
 **Framework Status:** Stable Release

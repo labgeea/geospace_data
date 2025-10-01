@@ -4,7 +4,7 @@ GEOSPACE Framework Version Management
 Central version file for all modules
 """
 
-__version__ = "1.3.0"
+__version__ = "1.4.0"
 __author__ = "GEOSPACE Project"
 __license__ = "Public Domain"
 __description__ = "Comprehensive framework for downloading and processing satellite and climate data"
@@ -14,6 +14,7 @@ MODIS_VERSION = __version__
 ECMWF_VERSION = __version__
 GRIDMET_VERSION = __version__
 CAMS_VERSION = __version__
+AQS_VERSION = __version__
 
 # Version info
 VERSION_INFO = {
@@ -22,7 +23,8 @@ VERSION_INFO = {
         "modis": MODIS_VERSION,
         "ecmwf": ECMWF_VERSION,
         "gridmet": GRIDMET_VERSION,
-        "cams": CAMS_VERSION
+        "cams": CAMS_VERSION,
+        "aqs": AQS_VERSION
     },
     "description": __description__,
     "author": __author__,

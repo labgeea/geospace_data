@@ -356,9 +356,9 @@ def process_variable(ds, var_name, var_info, config, mapped_name, aggregation='d
         # print(f"    Data shape after removing extra dimensions: {var_data.shape}")
         # print(f"    Data dimensions after removing extra dimensions: {var_data.dims}")
     else:
-        print(f"    No extra dimensions found, proceeding with original data")
+        print("    No extra dimensions found, proceeding with original data")
 
-    print(f"    About to apply unit conversion...")
+    print("    About to apply unit conversion...")
     # Apply unit conversion
     print(f"    Converting units: {config['unit_conversion']} -> {config['output_unit']}")
     var_data = apply_unit_conversion(var_data, config['unit_conversion'])
@@ -410,7 +410,7 @@ def print_processing_summary(processed_vars, output_dir, input_file):
     total_size = 0
     
     print(f"\n{'='*60}")
-    print(f"CAMS Processing Summary")
+    print("CAMS Processing Summary")
     print(f"{'='*60}")
     print(f"Input file: {input_file}")
     print(f"Output directory: {output_dir}")
@@ -573,7 +573,7 @@ def create_processing_report(processed_vars, output_dir, input_file, processing_
                 filename = os.path.basename(file_info['path'])
                 f.write(f"    {filename} ({file_info['size_mb']:.2f} MB)\n")
 
-    print(f"✓ Processing reports saved:")
+    print("✓ Processing reports saved:")
     print(f"  JSON: {report_path}")
     print(f"  Text: {txt_report_path}")
 
@@ -595,7 +595,7 @@ def process_cams_variables(input_file, output_dir="./data/processed/CAMS/",
     Returns:
         dict: Processed variables and their output files
     """
-    print(f"Processing CAMS air pollution variables")
+    print("Processing CAMS air pollution variables")
     print(f"Input file: {input_file}")
     print(f"Output directory: {output_dir}")
     print(f"Target CRS: {target_crs}")
@@ -727,7 +727,7 @@ def process_cams_variables(input_file, output_dir="./data/processed/CAMS/",
         ds.close()
         gc.collect()
 
-        print(f"\n✓ CAMS processing completed successfully!")
+        print("\n✓ CAMS processing completed successfully!")
         print(f"✓ Processed {len(processed_variables)} air pollution variables")
         print(f"✓ Output directory: {output_dir}")
 
@@ -820,7 +820,7 @@ def main():
     print(f"Output format: {args.output_format}")
     print(f"Target CRS: {args.target_crs}")
     if args.create_stacks:
-        print(f"Create stacks: Yes")
+        print("Create stacks: Yes")
     if chunk_config:
         print(f"Chunk size: {args.chunk_size}")
     print()

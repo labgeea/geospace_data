@@ -14,6 +14,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 
+## [1.4.0] - 2025-10-01
+### Added
+- **AQS module** for EPA air quality monitoring data
+  - Support for 7 NAAQS criteria pollutants (PM2.5, PM10, Ozone, NO2, SO2, CO, Lead)
+  - Download framework with EPA AQS API integration and rate limiting
+  - Processing pipeline: JSON → CSV with quality control and column standardization
+  - Variable packages (criteria, pm, gases, all)
+  - Optional GeoJSON output for spatial analysis (requires geopandas)
+  - County-level, site-level, and attempted state-level geographic filtering
+  
+### Known Limitations
+- State-level API requests often timeout; county-level recommended
+- Requires EPA AQS API credentials (free registration)
+
+### Changed
+- Updated **variable catalog** with AQS air quality variables
+- Catalog version bumped to **v1.4.0**
+- Documentation updated with AQS workflow examples and best practices
+
+
 ## [1.3.0] - 2025-08-25
 ### Added
 - **CAMS module** for air pollution variables  

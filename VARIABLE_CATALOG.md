@@ -1,6 +1,6 @@
 # GEOSPACE Variable Catalog
 
-**Version:** 1.3.0 | **Last Updated:** August 25, 2025
+**Version:** 1.4.0 | **Last Updated:** October 01, 2025
 
 Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
@@ -12,6 +12,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **ECMWF** | 14 variables | 31km | Hourly | ERA5 Reanalysis |
 | **GridMET** | 17 variables | 4km | Daily | University of Idaho |
 | **CAMS**   | 6 variables | ~80km (0.75°)    | Hourly–Daily | Copernicus Atmosphere Monitoring Service (ECMWF) |
+| **AQS**    | 6 variables | 31km | Hourly | US Environmental Protection Agency (EPA) |
 
 ---
 
@@ -83,5 +84,16 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **CO**    | Carbon monoxide concentration | ~80km | Hourly / Daily aggregated | `co` |
 
 ---
+
+## AQS Variables
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **PM2.5** | Fine particulate matter (≤2.5µm) mass concentration | 31km | Hourly | `pm25` |
+| **PM10**  | Coarse particulate matter (≤10µm) mass concentration | 31km | Hourly | `pm10` |
+| **NO₂**   | Nitrogen dioxide concentration | 31km | Hourly | `no2` |
+| **SO₂**   | Sulfur dioxide concentration | 31km | Hourly | `so2` |
+| **O₃**    | Ground-level ozone concentration | 31km | Hourly | `o3` |
+| **CO**    | Carbon monoxide concentration | 31km | Hourly | `co` |
 
 *For detailed usage and configuration options, see module-specific README files.*
