@@ -57,6 +57,8 @@ cd aqs/
 | **GridMET** | High-resolution meteorological data for CONUS | 1.2.0 | [gridmet/gridmet_README.md](gridmet/gridmet_README.md) |
 | **CAMS** | Air pollution data from Copernicus Atmosphere Monitoring Service | 1.3.0 | [cams/cams_README.md](cams/cams_README.md) |
 | **AQS** | Air quality data from US EPA | 1.4.0 | [aqs/aqs_README.md](aqs/aqs_README.md) |
+| **SVI** | Social Vulnerability Index data | 1.0.0 | [svi/svi_README.md](svi/svi_README.md) |
+| **COI** | Child Opportunity Index data | 1.0.0 | [coi/coi_README.md](coi/coi_README.md) |
 
 ## Installation
 
@@ -127,7 +129,15 @@ geospace/
 │   ├── aqs_download_generic.sh
 │   ├── aqs_process_generic.py
 │   ├── aqs_process_generic.sh
-└── └── aqs_README.md
+│   └── aqs_README.md
+├── svi/                          # SVI data tools
+│   ├── svi_process_generic.py
+│   ├── svi_process_generic.sh
+│   └── svi_README.md
+├── coi/                          # COI data tools
+│   ├── coi_process_generic.py
+│   ├── coi_process_generic.sh
+│   └── coi_README.md
 ```
 
 ## Versioning

@@ -13,6 +13,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+### [1.5.0] - 2026-01-01
+### Added
+- New **SVI** (Social Vulnerability Index) module (v1.0.0)
+  - Supports processing of SVI data from 2000-2022
+  - Generates spatial GeoPackage output linking SVI attributes to Census Tracts
+- New **COI** (Child Opportunity Index) module (v1.0.0)
+  - Supports processing of COI data from 2012-2023
+  - Generates spatial GeoPackage output
+- Updated `VARIABLE_CATALOG.md` with comprehensive variable lists for SVI and COI.
+
+### Known Limitations
+- SVI and COI data is only available for download manually from their respective resources (https://www.census.gov/geo/maps-data/data/svi.html and https://www.census.gov/geo/maps-data/data/coi.html)
+
+### Changed
+- Updated **variable catalog** with SVI and COI variables
+- Catalog version bumped to **v1.5.0**
+- Documentation updated with SVI and COI workflow examples and best practices
+
 
 ## [1.4.0] - 2025-10-01
 ### Added
@@ -148,7 +166,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tile-based processing for large datasets
 - Compression and chunking optimizations
 
-[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.1.0...v1.2.0

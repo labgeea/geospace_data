@@ -1,6 +1,6 @@
 # GEOSPACE Variable Catalog
 
-**Version:** 1.4.0 | **Last Updated:** October 01, 2025
+**Version:** 1.5.0 | **Last Updated:** January 01, 2026
 
 Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
@@ -13,6 +13,8 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **GridMET** | 17 variables | 4km | Daily | University of Idaho |
 | **CAMS**   | 6 variables | ~80km (0.75°)    | Hourly–Daily | Copernicus Atmosphere Monitoring Service (ECMWF) |
 | **AQS**    | 6 variables | 31km | Hourly | US Environmental Protection Agency (EPA) |
+| **SVI**    | 20+ variables | Census Tract | 2000-2022 (Bi-annual) | CDC / ATSDR |
+| **COI**    | 20+ variables | Census Tract | 2012-2023 (Annual) | Child Opportunity Project |
 
 ---
 
@@ -95,5 +97,81 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **SO₂**   | Sulfur dioxide concentration | 31km | Hourly | `so2` |
 | **O₃**    | Ground-level ozone concentration | 31km | Hourly | `o3` |
 | **CO**    | Carbon monoxide concentration | 31km | Hourly | `co` |
+
+---
+
+## SVI Variables
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **overall_score** | Overall Social Vulnerability Index Score | Census Tract | Bi-annual | `overall_score` (SPL_THEMES) |
+| **overall_rank** | Overall Social Vulnerability Index Rank | Census Tract | Bi-annual | `overall_rank` (RPL_THEMES) |
+| **theme1_score** | Socioeconomic Status Score | Census Tract | Bi-annual | `theme1_score` (SPL_THEME1) |
+| **theme1_rank** | Socioeconomic Status Rank | Census Tract | Bi-annual | `theme1_rank` (RPL_THEME1) |
+| **theme2_score** | Household Composition & Disability Score | Census Tract | Bi-annual | `theme2_score` (SPL_THEME2) |
+| **theme2_rank** | Household Composition & Disability Rank | Census Tract | Bi-annual | `theme2_rank` (RPL_THEME2) |
+| **theme3_score** | Minority Status & Language Score | Census Tract | Bi-annual | `theme3_score` (SPL_THEME3) |
+| **theme3_rank** | Minority Status & Language Rank | Census Tract | Bi-annual | `theme3_rank` (RPL_THEME3) |
+| **theme4_score** | Housing Type & Transportation Score | Census Tract | Bi-annual | `theme4_score` (SPL_THEME4) |
+| **theme4_rank** | Housing Type & Transportation Rank | Census Tract | Bi-annual | `theme4_rank` (RPL_THEME4) |
+| **pov_pctl** | Percentile: Below Poverty | Census Tract | Bi-annual | `pov_pctl` (EPL_POV) |
+| **unemp_pctl** | Percentile: Unemployed | Census Tract | Bi-annual | `unemp_pctl` (EPL_UNEMP) |
+| **pci_pctl** | Percentile: Per Capita Income | Census Tract | Bi-annual | `pci_pctl` (EPL_PCI) |
+| **nohsdip_pctl** | Percentile: No High School Diploma | Census Tract | Bi-annual | `nohsdip_pctl` (EPL_NOHSDP) |
+| **age65_pctl** | Percentile: Aged 65 or Older | Census Tract | Bi-annual | `age65_pctl` (EPL_AGE65) |
+| **age17_pctl** | Percentile: Aged 17 or Younger | Census Tract | Bi-annual | `age17_pctl` (EPL_AGE17) |
+| **disabl_pctl** | Percentile: Civilian with a Disability | Census Tract | Bi-annual | `disabl_pctl` (EPL_DISABL) |
+| **sngprnt_pctl** | Percentile: Single-Parent Households | Census Tract | Bi-annual | `sngprnt_pctl` (EPL_SNGPNT) |
+| **minority_pctl** | Percentile: Minority | Census Tract | Bi-annual | `minority_pctl` (EPL_MINRTY) |
+| **limeng_pctl** | Percentile: Speaks English "Less than Well" | Census Tract | Bi-annual | `limeng_pctl` (EPL_LIMENG) |
+| **munit_pctl** | Percentile: Multi-Unit Structures | Census Tract | Bi-annual | `munit_pctl` (EPL_MUNIT) |
+| **mobile_pctl** | Percentile: Mobile Homes | Census Tract | Bi-annual | `mobile_pctl` (EPL_MOBILE) |
+| **crowd_pctl** | Percentile: Crowding | Census Tract | Bi-annual | `crowd_pctl` (EPL_CROWD) |
+| **noveh_pctl** | Percentile: No Vehicle | Census Tract | Bi-annual | `noveh_pctl` (EPL_NOVEH) |
+| **groupq_pctl** | Percentile: Group Quarters | Census Tract | Bi-annual | `groupq_pctl` (EPL_GROUPQ) |
+| **uninsur_pctl** | Percentile: Uninsured | Census Tract | Bi-annual | `uninsur_pctl` (EPL_UNINSUR) |
+
+---
+
+## COI Variables
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **z_COI_nat** | Overall COI Z-Score (National Norm) | Census Tract | Annual | `z_COI_nat` |
+| **c5_COI_nat** | Overall COI Quintile (National Norm) | Census Tract | Annual | `c5_COI_nat` |
+| **r_COI_nat** | Overall COI Rank (National Norm) | Census Tract | Annual | `r_COI_nat` |
+| **z_COI_stt** | Overall COI Z-Score (State Norm) | Census Tract | Annual | `z_COI_stt` |
+| **c5_COI_stt** | Overall COI Quintile (State Norm) | Census Tract | Annual | `c5_COI_stt` |
+| **r_COI_stt** | Overall COI Rank (State Norm) | Census Tract | Annual | `r_COI_stt` |
+| **z_COI_met** | Overall COI Z-Score (Metro Norm) | Census Tract | Annual | `z_COI_met` |
+| **c5_COI_met** | Overall COI Quintile (Metro Norm) | Census Tract | Annual | `c5_COI_met` |
+| **r_COI_met** | Overall COI Rank (Metro Norm) | Census Tract | Annual | `r_COI_met` |
+| **z_ED_nat** | Education Domain Z-Score (National Norm) | Census Tract | Annual | `z_ED_nat` |
+| **c5_ED_nat** | Education Domain Quintile (National Norm) | Census Tract | Annual | `c5_ED_nat` |
+| **r_ED_nat** | Education Domain Rank (National Norm) | Census Tract | Annual | `r_ED_nat` |
+| **z_ED_stt** | Education Domain Z-Score (State Norm) | Census Tract | Annual | `z_ED_stt` |
+| **c5_ED_stt** | Education Domain Quintile (State Norm) | Census Tract | Annual | `c5_ED_stt` |
+| **r_ED_stt** | Education Domain Rank (State Norm) | Census Tract | Annual | `r_ED_stt` |
+| **z_ED_met** | Education Domain Z-Score (Metro Norm) | Census Tract | Annual | `z_ED_met` |
+| **c5_ED_met** | Education Domain Quintile (Metro Norm) | Census Tract | Annual | `c5_ED_met` |
+| **r_ED_met** | Education Domain Rank (Metro Norm) | Census Tract | Annual | `r_ED_met` |
+| **z_HE_nat** | Health/Environment Domain Z-Score (National Norm) | Census Tract | Annual | `z_HE_nat` |
+| **c5_HE_nat** | Health/Environment Domain Quintile (National Norm) | Census Tract | Annual | `c5_HE_nat` |
+| **r_HE_nat** | Health/Environment Domain Rank (National Norm) | Census Tract | Annual | `r_HE_nat` |
+| **z_HE_stt** | Health/Environment Domain Z-Score (State Norm) | Census Tract | Annual | `z_HE_stt` |
+| **c5_HE_stt** | Health/Environment Domain Quintile (State Norm) | Census Tract | Annual | `c5_HE_stt` |
+| **r_HE_stt** | Health/Environment Domain Rank (State Norm) | Census Tract | Annual | `r_HE_stt` |
+| **z_HE_met** | Health/Environment Domain Z-Score (Metro Norm) | Census Tract | Annual | `z_HE_met` |
+| **c5_HE_met** | Health/Environment Domain Quintile (Metro Norm) | Census Tract | Annual | `c5_HE_met` |
+| **r_HE_met** | Health/Environment Domain Rank (Metro Norm) | Census Tract | Annual | `r_HE_met` |
+| **z_SE_nat** | Social/Economic Domain Z-Score (National Norm) | Census Tract | Annual | `z_SE_nat` |
+| **c5_SE_nat** | Social/Economic Domain Quintile (National Norm) | Census Tract | Annual | `c5_SE_nat` |
+| **r_SE_nat** | Social/Economic Domain Rank (National Norm) | Census Tract | Annual | `r_SE_nat` |
+| **z_SE_stt** | Social/Economic Domain Z-Score (State Norm) | Census Tract | Annual | `z_SE_stt` |
+| **c5_SE_stt** | Social/Economic Domain Quintile (State Norm) | Census Tract | Annual | `c5_SE_stt` |
+| **r_SE_stt** | Social/Economic Domain Rank (State Norm) | Census Tract | Annual | `r_SE_stt` |
+| **z_SE_met** | Social/Economic Domain Z-Score (Metro Norm) | Census Tract | Annual | `z_SE_met` |
+| **c5_SE_met** | Social/Economic Domain Quintile (Metro Norm) | Census Tract | Annual | `c5_SE_met` |
+| **r_SE_met** | Social/Economic Domain Rank (Metro Norm) | Census Tract | Annual | `r_SE_met` |
 
 *For detailed usage and configuration options, see module-specific README files.*
