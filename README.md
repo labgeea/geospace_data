@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.4.0  
+**Version:** 1.7.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -60,6 +60,7 @@ cd aqs/
 | **SVI** | Social Vulnerability Index data | 1.0.0 | [svi/svi_README.md](svi/svi_README.md) |
 | **COI** | Child Opportunity Index data | 1.0.0 | [coi/coi_README.md](coi/coi_README.md) |
 | **PLACES** | CDC PLACES health outcomes and prevention data | 1.0.0 | [places/places_README.md](places/places_README.md) |
+| **FIRMS** | NASA FIRMS active fire data | 1.0.0 | [firms/firms_README.md](firms/firms_README.md) |
 
 ## Installation
 

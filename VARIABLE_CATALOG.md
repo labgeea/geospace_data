@@ -1,6 +1,6 @@
 # GEOSPACE Variable Catalog
 
-**Version:** 1.6.0 | **Last Updated:** January 26, 2026
+**Version:** 1.7.0 | **Last Updated:** January 26, 2026
 
 Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
@@ -16,6 +16,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **SVI**    | 20+ variables | Census Tract | 2000-2022 (Bi-annual) | CDC / ATSDR |
 | **COI**    | 20+ variables | Census Tract | 2012-2023 (Annual) | Child Opportunity Project |
 | **PLACES** | 30 variables | ZCTA | 2020-2025 (Annual) | CDC PLACES |
+| **FIRMS** | 6 variables | Point/Polygon | 2000-present (Daily) | NASA FIRMS |
 
 ---
 
@@ -242,3 +243,35 @@ CDC PLACES provides small-area estimates for health outcomes, prevention, and ri
 | **disability_independent_pct** | Independent living disability | ZCTA | Annual | `disability_independent_pct` |
 
 *For detailed usage and configuration options, see module-specific README files.*
+
+---
+
+## FIRMS Variables
+
+NASA FIRMS active fire data. Raw data is point-based; processing can aggregate to polygons.
+
+### Raw Fire Detection Variables
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **latitude** | Fire pixel center latitude | Point | Instantaneous | `latitude` |
+| **longitude** | Fire pixel center longitude | Point | Instantaneous | `longitude` |
+| **brightness** | Brightness temperature (MODIS) | 1km | Instantaneous | `brightness` |
+| **bright_ti4** | I-4 channel brightness temp (VIIRS) | 375m | Instantaneous | `bright_ti4` |
+| **frp** | Fire Radiative Power (MW) | 375m-1km | Instantaneous | `frp` |
+| **confidence** | Detection confidence (0-100 or low/nominal/high) | 375m-1km | Instantaneous | `confidence` |
+| **acq_date** | Acquisition date | - | Daily | `acq_date` |
+| **acq_time** | Acquisition time (UTC, HHMM) | - | Instantaneous | `acq_time` |
+| **satellite** | Satellite name (Terra, Aqua, S-NPP, NOAA-20/21) | - | - | `satellite` |
+| **daynight** | Day (D) or Night (N) detection | - | - | `daynight` |
+
+### Aggregated Variables (from Processing Script)
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **fire_count** | Number of fire detections | County/ZCTA/State | Daily-Annual | `fire_count` |
+| **frp_total** | Total Fire Radiative Power (MW) | County/ZCTA/State | Daily-Annual | `frp_total` |
+| **frp_mean** | Mean Fire Radiative Power (MW) | County/ZCTA/State | Daily-Annual | `frp_mean` |
+| **frp_max** | Maximum Fire Radiative Power (MW) | County/ZCTA/State | Daily-Annual | `frp_max` |
+| **fire_days** | Number of unique days with detections | County/ZCTA/State | Monthly-Annual | `fire_days` |
+| **high_conf_count** | Count of high-confidence (≥80) detections | County/ZCTA/State | Daily-Annual | `high_conf_count` |
