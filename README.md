@@ -59,6 +59,7 @@ cd aqs/
 | **AQS** | Air quality data from US EPA | 1.4.0 | [aqs/aqs_README.md](aqs/aqs_README.md) |
 | **SVI** | Social Vulnerability Index data | 1.0.0 | [svi/svi_README.md](svi/svi_README.md) |
 | **COI** | Child Opportunity Index data | 1.0.0 | [coi/coi_README.md](coi/coi_README.md) |
+| **PLACES** | CDC PLACES health outcomes and prevention data | 1.0.0 | [places/places_README.md](places/places_README.md) |
 
 ## Installation
 

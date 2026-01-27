@@ -13,6 +13,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [1.6.0] - 2026-01-26
+### Added
+- New **PLACES** (CDC Population Level Analysis and Community Estimates) module (v1.0.0)
+  - Download script for ZCTA-level health data from CDC PLACES API (years 2020-2025)
+  - Processing script with long-to-wide pivot, variable standardization, and geometry merge
+  - 30 health measures across 5 categories: Health Outcomes, Prevention, Health Risk Behaviors, Health Status, Disabilities
+  - 95% confidence intervals included for all measures (`_lo` and `_hi` suffixes)
+  - GeoPackage output with ZCTA polygons from 2020 Census
+  - Optional tabular-only output with `--no-geometry` flag
+
+### Changed
+- Updated **VARIABLE_CATALOG.md** with PLACES variables (30 measures)
+- Catalog version bumped to **v1.6.0**
+- Documentation updated with PLACES workflow examples
+
+
 ### [1.5.0] - 2026-01-01
 ### Added
 - New **SVI** (Social Vulnerability Index) module (v1.0.0)
@@ -166,7 +182,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tile-based processing for large datasets
 - Compression and chunking optimizations
 
-[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/sandbox-msh/geospace_data/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/sandbox-msh/geospace_data/compare/v1.2.0...v1.3.0
