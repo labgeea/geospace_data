@@ -1,6 +1,6 @@
 # GEOSPACE Variable Catalog
 
-**Version:** 1.7.0 | **Last Updated:** January 26, 2026
+**Version:** 1.8.0 | **Last Updated:** January 26, 2026
 
 Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
@@ -17,6 +17,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **COI**    | 20+ variables | Census Tract | 2012-2023 (Annual) | Child Opportunity Project |
 | **PLACES** | 30 variables | ZCTA | 2020-2025 (Annual) | CDC PLACES |
 | **FIRMS** | 6 variables | Point/Polygon | 2000-present (Daily) | NASA FIRMS |
+| **STORMS** | 10+ variables | Point/Polygon | 1950-present (Event) | NOAA NCEI |
 
 ---
 
@@ -275,3 +276,24 @@ NASA FIRMS active fire data. Raw data is point-based; processing can aggregate t
 | **frp_max** | Maximum Fire Radiative Power (MW) | County/ZCTA/State | Daily-Annual | `frp_max` |
 | **fire_days** | Number of unique days with detections | County/ZCTA/State | Monthly-Annual | `fire_days` |
 | **high_conf_count** | Count of high-confidence (≥80) detections | County/ZCTA/State | Daily-Annual | `high_conf_count` |
+
+---
+
+## STORMS Variables
+
+NOAA Storm Events Database. Event-based data.
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **event_type** | Type of storm event (e.g., Flood, Tornado) | - | Event | `event_type` |
+| **begin_timestamp** | Date and time event started | - | Instantaneous | `begin_timestamp` |
+| **begin_lat** | Start latitude (if available) | Point | - | `begin_lat` |
+| **begin_lon** | Start longitude (if available) | Point | - | `begin_lon` |
+| **damage_property_num**| Estimated property damage in USD | - | Event | `damage_property_num` |
+| **damage_crops_num** | Estimated crop damage in USD | - | Event | `damage_crops_num` |
+| **deaths_direct** | Number of direct fatalities | - | Event | `deaths_direct` |
+| **injuries_direct** | Number of direct injuries | - | Event | `injuries_direct` |
+| **magnitude** | Magnitude value (wind speed, hail size, etc.) | - | Event | `magnitude` |
+| **magnitude_type** | Units for magnitude (e.g., knots, inches) | - | Event | `magnitude_type` |
+| **state** | State name (upper case) | Polygon | - | `state` |
+| **cz_name** | County or Zone name | Polygon | - | `cz_name` |

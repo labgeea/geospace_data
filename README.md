@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.7.0  
+**Version:** 1.8.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -61,6 +61,7 @@ cd aqs/
 | **COI** | Child Opportunity Index data | 1.0.0 | [coi/coi_README.md](coi/coi_README.md) |
 | **PLACES** | CDC PLACES health outcomes and prevention data | 1.0.0 | [places/places_README.md](places/places_README.md) |
 | **FIRMS** | NASA FIRMS active fire data | 1.0.0 | [firms/firms_README.md](firms/firms_README.md) |
+| **STORMS** | NOAA Storm Events Database | 1.0.0 | [storms/storms_README.md](storms/storms_README.md) |
 
 ## Installation
 

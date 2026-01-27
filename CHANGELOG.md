@@ -13,6 +13,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [1.8.0] - 2026-01-26
+### Added
+- New **STORMS** (NOAA Storm Events Database) module (v1.0.0)
+  - Download script (`storms_download_generic.py`) for NOAA NCEI "details" CSV files
+  - Automatic version detection for the requested year
+  - Processing script (`storms_process_generic.py`) with damage parsing ($K/M/B)
+  - Output formats: Standardized CSV or GeoPackage (Spatial Point Events)
+  - Filtering by State (e.g., TEXAS) or Event Type (e.g., Tornado, Flood)
+  - Automatic handling of missing coordinates (creates spatial subset)
+
+### Changed
+- Updated **VARIABLE_CATALOG.md** with STORMS variables
+- Catalog version bumped to **v1.8.0**
+- Framework now includes 10 modules
+
 ## [1.7.0] - 2026-01-26
 ### Added
 - New **FIRMS** (Fire Information for Resource Management System) module (v1.0.0)
