@@ -4,7 +4,7 @@ GEOSPACE Framework Version Management
 Central version file for all modules
 """
 
-__version__ = "1.6.0"
+__version__ = "1.7.0"
 __author__ = "GEOSPACE Project"
 __license__ = "Public Domain"
 __description__ = "Comprehensive framework for downloading and processing satellite and climate data"
@@ -18,6 +18,7 @@ AQS_VERSION = __version__
 SVI_VERSION = "1.0.0"
 COI_VERSION = "1.0.0"
 PLACES_VERSION = "1.0.0"
+FIRMS_VERSION = "1.0.0"
 
 # Version info
 VERSION_INFO = {
@@ -30,7 +31,8 @@ VERSION_INFO = {
         "aqs": AQS_VERSION,
         "svi": SVI_VERSION,
         "coi": COI_VERSION,
-        "places": PLACES_VERSION
+        "places": PLACES_VERSION,
+        "firms": FIRMS_VERSION
     },
     "description": __description__,
     "author": __author__,

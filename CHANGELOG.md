@@ -13,6 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [1.7.0] - 2026-01-26
+### Added
+- New **FIRMS** (Fire Information for Resource Management System) module (v1.0.0)
+  - Download script with NASA FIRMS REST API integration
+  - Supports multiple sensors: MODIS (1km), VIIRS S-NPP/NOAA-20/21 (375m), Landsat (30m)
+  - Bounding box presets: CONUS, California, World, or custom coordinates
+  - Standard Processing (historical) and Near Real-Time data sources
+  - Processing script with spatial aggregation to County/ZCTA/State
+  - Temporal aggregation: daily, monthly, annual
+  - Output variables: fire_count, frp_total, frp_mean, fire_days, high_conf_count
+  - GeoPackage output with aggregated fire statistics per polygon
+
+### Changed
+- Updated **VARIABLE_CATALOG.md** with FIRMS variables
+- Catalog version bumped to **v1.7.0**
+- Framework now includes 9 modules spanning satellite, climate, air quality, health, and fire data
+
 ## [1.6.0] - 2026-01-26
 ### Added
 - New **PLACES** (CDC Population Level Analysis and Community Estimates) module (v1.0.0)

@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.6.0  
+**Version:** 1.7.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -60,6 +60,7 @@ cd aqs/
 | **SVI** | Social Vulnerability Index data | 1.0.0 | [svi/svi_README.md](svi/svi_README.md) |
 | **COI** | Child Opportunity Index data | 1.0.0 | [coi/coi_README.md](coi/coi_README.md) |
 | **PLACES** | CDC PLACES health outcomes and prevention data | 1.0.0 | [places/places_README.md](places/places_README.md) |
+| **FIRMS** | NASA FIRMS active fire data | 1.0.0 | [firms/firms_README.md](firms/firms_README.md) |
 
 ## Installation
 
@@ -145,6 +146,15 @@ geospace/
 │   ├── places_process_generic.py
 │   ├── places_process_generic.sh
 │   └── places_README.md
+├── firms/                        # FIRMS data tools
+│   ├── firms_download_generic.py
+│   ├── firms_download_generic.sh
+│   ├── firms_process_generic.py
+│   ├── firms_process_generic.sh
+│   └── firms_README.md
+├── catalog/                      # Metadata catalog tools
+│   ├── convert_catalog.py
+│   └── CATALOG_README.md
 ```
 
 ## Versioning
@@ -181,6 +191,6 @@ This framework is released under the Public Domain license. Individual component
 
 ---
 
-**Current Version:** 1.6.0  
-**Last Updated:** January 2026  
+**Current Version:** 1.7.0  
+**Last Updated:** February 2026  
 **Framework Status:** Stable Release
