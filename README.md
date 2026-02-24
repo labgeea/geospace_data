@@ -62,6 +62,7 @@ cd aqs/
 | **PLACES** | CDC PLACES health outcomes and prevention data | 1.0.0 | [places/places_README.md](places/places_README.md) |
 | **FIRMS** | NASA FIRMS active fire data | 1.0.0 | [firms/firms_README.md](firms/firms_README.md) |
 | **STORMS** | NOAA Storm Events Database | 1.0.0 | [storms/storms_README.md](storms/storms_README.md) |
+| **WILDFIRE_SMOKE** | Stanford Smoke PM2.5 Reanalysis | 1.0.0 | [wildfire_smoke/wildfire_smoke_README.md](wildfire_smoke/wildfire_smoke_README.md) |
 
 ## Installation
 
@@ -141,6 +142,12 @@ geospace/
 │   ├── coi_process_generic.py
 │   ├── coi_process_generic.sh
 │   └── coi_README.md
+├── wildfire_smoke/               # Wildfire Smoke data tools
+│   ├── wildfire_smoke_download_generic.py
+│   ├── wildfire_smoke_download_generic.sh
+│   ├── wildfire_smoke_process_generic.py
+│   ├── wildfire_smoke_process_generic.sh
+│   └── wildfire_smoke_README.md
 ```
 
 ## Versioning

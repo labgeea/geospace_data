@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- New **WILDFIRE_SMOKE** module (v1.0.0)
+  - Target dataset: Stanford Childs et al. (2022) Smoke PM2.5 Reanalysis (10km, 2006-2020)
+  - Download script pulling canonical arrays from Harvard Dataverse
+  - Parallel processing script filling structural 0s to create dense Parquet arrays
 ### Changed
 ### Deprecated
 ### Removed

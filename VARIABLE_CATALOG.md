@@ -15,7 +15,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **AQS**    | 6 variables | 31km | Hourly | US Environmental Protection Agency (EPA) |
 | **SVI**    | 20+ variables | Census Tract | 2000-2022 (Bi-annual) | CDC / ATSDR |
 | **COI**    | 20+ variables | Census Tract | 2012-2023 (Annual) | Child Opportunity Project |
-| **PLACES** | 30 variables | ZCTA | 2020-2025 (Annual) | CDC PLACES |
+| **PLACES** | 30+ variables | County/Place/Tract/ZCTA | 2020-2025 (Annual releases) | CDC PLACES |
 | **FIRMS** | 6 variables | Point/Polygon | 2000-present (Daily) | NASA FIRMS |
 | **STORMS** | 10+ variables | Point/Polygon | 1950-present (Event) | NOAA NCEI |
 
@@ -181,71 +181,67 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
 ## PLACES Variables
 
-CDC PLACES provides small-area estimates for health outcomes, prevention, and risk behaviors at the ZCTA level. Each variable includes `_lo` and `_hi` suffixes for 95% confidence intervals.
+CDC PLACES provides small-area estimates for health outcomes, prevention, and risk behaviors at County, Place, Census Tract, and ZCTA levels. Each variable includes `_lo` and `_hi` suffixes for 95% confidence intervals. Release years 2020-2025 are available; all geo levels are supported except ZCTA for 2024.
 
 ### Health Outcomes
 
 | Variable | Description | Resolution | Temporal | Script Alias |
 |----------|-------------|------------|----------|--------------|
-| **arthritis_pct** | Arthritis among adults aged ≥18 years | ZCTA | Annual | `arthritis_pct` |
-| **asthma_current_pct** | Current asthma among adults aged ≥18 years | ZCTA | Annual | `asthma_current_pct` |
-| **high_bp_pct** | High blood pressure among adults aged ≥18 years | ZCTA | Annual | `high_bp_pct` |
-| **cancer_pct** | Cancer (excluding skin cancer) among adults aged ≥18 years | ZCTA | Annual | `cancer_pct` |
-| **high_cholesterol_pct** | High cholesterol (screened in past 5 years) | ZCTA | Annual | `high_cholesterol_pct` |
-| **kidney_disease_pct** | Chronic kidney disease among adults aged ≥18 years | ZCTA | Annual | `kidney_disease_pct` |
-| **copd_pct** | Chronic obstructive pulmonary disease | ZCTA | Annual | `copd_pct` |
-| **heart_disease_pct** | Coronary heart disease among adults aged ≥18 years | ZCTA | Annual | `heart_disease_pct` |
-| **depression_pct** | Depression among adults aged ≥18 years | ZCTA | Annual | `depression_pct` |
-| **diabetes_pct** | Diagnosed diabetes among adults aged ≥18 years | ZCTA | Annual | `diabetes_pct` |
-| **obesity_pct** | Obesity among adults aged ≥18 years | ZCTA | Annual | `obesity_pct` |
-| **stroke_pct** | Stroke among adults aged ≥18 years | ZCTA | Annual | `stroke_pct` |
+| **arthritis_pct** | Arthritis among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `arthritis_pct` |
+| **asthma_current_pct** | Current asthma among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `asthma_current_pct` |
+| **high_bp_pct** | High blood pressure among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `high_bp_pct` |
+| **cancer_pct** | Cancer (excluding skin cancer) among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `cancer_pct` |
+| **high_cholesterol_pct** | High cholesterol (screened in past 5 years) | County/Place/Tract/ZCTA | Annual release | `high_cholesterol_pct` |
+| **kidney_disease_pct** | Chronic kidney disease among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `kidney_disease_pct` |
+| **copd_pct** | Chronic obstructive pulmonary disease | County/Place/Tract/ZCTA | Annual release | `copd_pct` |
+| **heart_disease_pct** | Coronary heart disease among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `heart_disease_pct` |
+| **depression_pct** | Depression among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `depression_pct` |
+| **diabetes_pct** | Diagnosed diabetes among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `diabetes_pct` |
+| **obesity_pct** | Obesity among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `obesity_pct` |
+| **stroke_pct** | Stroke among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `stroke_pct` |
 
 ### Prevention
 
 | Variable | Description | Resolution | Temporal | Script Alias |
 |----------|-------------|------------|----------|--------------|
-| **dental_visit_pct** | Visits to dentist or dental clinic | ZCTA | Annual | `dental_visit_pct` |
-| **checkup_pct** | Routine checkup within the past year | ZCTA | Annual | `checkup_pct` |
-| **cholesterol_screening_pct** | Cholesterol screening among adults | ZCTA | Annual | `cholesterol_screening_pct` |
-| **colorectal_screening_pct** | Colorectal cancer screening (ages 50-75) | ZCTA | Annual | `colorectal_screening_pct` |
-| **mammography_pct** | Mammography use among women aged 50-74 | ZCTA | Annual | `mammography_pct` |
-| **cervical_screening_pct** | Cervical cancer screening (women 21-65) | ZCTA | Annual | `cervical_screening_pct` |
-| **bp_medication_pct** | Taking BP medication among adults with high BP | ZCTA | Annual | `bp_medication_pct` |
-| **preventive_men65_pct** | Men ≥65 up to date on preventive services | ZCTA | Annual | `preventive_men65_pct` |
-| **preventive_women65_pct** | Women ≥65 up to date on preventive services | ZCTA | Annual | `preventive_women65_pct` |
+| **dental_visit_pct** | Visits to dentist or dental clinic | County/Place/Tract/ZCTA | Annual release | `dental_visit_pct` |
+| **checkup_pct** | Routine checkup within the past year | County/Place/Tract/ZCTA | Annual release | `checkup_pct` |
+| **cholesterol_screening_pct** | Cholesterol screening among adults | County/Place/Tract/ZCTA | Annual release | `cholesterol_screening_pct` |
+| **colorectal_screening_pct** | Colorectal cancer screening (ages 50-75) | County/Place/Tract/ZCTA | Annual release | `colorectal_screening_pct` |
+| **mammography_pct** | Mammography use among women aged 50-74 | County/Place/Tract/ZCTA | Annual release | `mammography_pct` |
+| **cervical_screening_pct** | Cervical cancer screening (women 21-65) | County/Place/Tract/ZCTA | Annual release | `cervical_screening_pct` |
+| **bp_medication_pct** | Taking BP medication among adults with high BP | County/Place/Tract/ZCTA | Annual release | `bp_medication_pct` |
+| **preventive_men65_pct** | Men ≥65 up to date on preventive services | County/Place/Tract/ZCTA | Annual release | `preventive_men65_pct` |
+| **preventive_women65_pct** | Women ≥65 up to date on preventive services | County/Place/Tract/ZCTA | Annual release | `preventive_women65_pct` |
 
 ### Health Risk Behaviors
 
 | Variable | Description | Resolution | Temporal | Script Alias |
 |----------|-------------|------------|----------|--------------|
-| **binge_drinking_pct** | Binge drinking among adults aged ≥18 years | ZCTA | Annual | `binge_drinking_pct` |
-| **smoking_pct** | Current smoking among adults aged ≥18 years | ZCTA | Annual | `smoking_pct` |
-| **physical_inactivity_pct** | No leisure-time physical activity | ZCTA | Annual | `physical_inactivity_pct` |
-| **short_sleep_pct** | Sleeping less than 7 hours | ZCTA | Annual | `short_sleep_pct` |
+| **binge_drinking_pct** | Binge drinking among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `binge_drinking_pct` |
+| **smoking_pct** | Current smoking among adults aged ≥18 years | County/Place/Tract/ZCTA | Annual release | `smoking_pct` |
+| **physical_inactivity_pct** | No leisure-time physical activity | County/Place/Tract/ZCTA | Annual release | `physical_inactivity_pct` |
+| **short_sleep_pct** | Sleeping less than 7 hours | County/Place/Tract/ZCTA | Annual release | `short_sleep_pct` |
 
 ### Health Status
 
 | Variable | Description | Resolution | Temporal | Script Alias |
 |----------|-------------|------------|----------|--------------|
-| **health_poor_pct** | Fair or poor self-rated health status | ZCTA | Annual | `health_poor_pct` |
-| **physical_distress_pct** | Physical health not good for ≥14 days | ZCTA | Annual | `physical_distress_pct` |
-| **mental_distress_pct** | Mental health not good for ≥14 days | ZCTA | Annual | `mental_distress_pct` |
+| **health_poor_pct** | Fair or poor self-rated health status | County/Place/Tract/ZCTA | Annual release | `health_poor_pct` |
+| **physical_distress_pct** | Physical health not good for ≥14 days | County/Place/Tract/ZCTA | Annual release | `physical_distress_pct` |
+| **mental_distress_pct** | Mental health not good for ≥14 days | County/Place/Tract/ZCTA | Annual release | `mental_distress_pct` |
 
 ### Disabilities (Available in some releases)
 
 | Variable | Description | Resolution | Temporal | Script Alias |
 |----------|-------------|------------|----------|--------------|
-| **disability_any_pct** | Any disability among adults | ZCTA | Annual | `disability_any_pct` |
-| **disability_cognitive_pct** | Cognitive disability | ZCTA | Annual | `disability_cognitive_pct` |
-| **disability_hearing_pct** | Hearing disability | ZCTA | Annual | `disability_hearing_pct` |
-| **disability_mobility_pct** | Mobility disability | ZCTA | Annual | `disability_mobility_pct` |
-| **disability_vision_pct** | Vision disability | ZCTA | Annual | `disability_vision_pct` |
-| **disability_selfcare_pct** | Self-care disability | ZCTA | Annual | `disability_selfcare_pct` |
-| **disability_independent_pct** | Independent living disability | ZCTA | Annual | `disability_independent_pct` |
-
-*For detailed usage and configuration options, see module-specific README files.*
-
----
+| **disability_any_pct** | Any disability among adults | County/Place/Tract/ZCTA | Annual release | `disability_any_pct` |
+| **disability_cognitive_pct** | Cognitive disability | County/Place/Tract/ZCTA | Annual release | `disability_cognitive_pct` |
+| **disability_hearing_pct** | Hearing disability | County/Place/Tract/ZCTA | Annual release | `disability_hearing_pct` |
+| **disability_mobility_pct** | Mobility disability | County/Place/Tract/ZCTA | Annual release | `disability_mobility_pct` |
+| **disability_vision_pct** | Vision disability | County/Place/Tract/ZCTA | Annual release | `disability_vision_pct` |
+| **disability_selfcare_pct** | Self-care disability | County/Place/Tract/ZCTA | Annual release | `disability_selfcare_pct` |
+| **disability_independent_pct** | Independent living disability | County/Place/Tract/ZCTA | Annual release | `disability_independent_pct` |
 
 ## FIRMS Variables
 
@@ -297,3 +293,8 @@ NOAA Storm Events Database. Event-based data.
 | **magnitude_type** | Units for magnitude (e.g., knots, inches) | - | Event | `magnitude_type` |
 | **state** | State name (upper case) | Polygon | - | `state` |
 | **cz_name** | County or Zone name | Polygon | - | `cz_name` |
+
+
+*For detailed usage and configuration options, see module-specific README files.*
+
+---

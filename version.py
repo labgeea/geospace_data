@@ -20,6 +20,7 @@ COI_VERSION = "1.0.0"
 PLACES_VERSION = "1.0.0"
 FIRMS_VERSION = "1.0.0"
 STORMS_VERSION = "1.0.0"
+WILDFIRE_SMOKE_VERSION = "1.0.0"
 
 # Version info
 VERSION_INFO = {
@@ -34,7 +35,8 @@ VERSION_INFO = {
         "coi": COI_VERSION,
         "places": PLACES_VERSION,
         "firms": FIRMS_VERSION,
-        "storms": STORMS_VERSION
+        "storms": STORMS_VERSION,
+        "wildfire_smoke": WILDFIRE_SMOKE_VERSION
     },
     "description": __description__,
     "author": __author__,
