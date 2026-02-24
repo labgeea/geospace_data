@@ -108,7 +108,7 @@ def format_excel_file(df, output_file, framework_version):
         # Auto-adjust column widths
         for i, column in enumerate(df.columns):
             max_length = max(
-                df[column].astype(str).map(len).max(),
+                df[column].fillna('').astype(str).map(len).max(),
                 len(column)
             )
             # Cap at reasonable width

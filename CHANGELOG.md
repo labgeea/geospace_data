@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Optional tabular-only output with `--no-geometry` flag
 
 ### Changed
-- Updated **VARIABLE_CATALOG.md** with PLACES variables (30 measures)
+- Updated **VARIABLE_CATALOG.md** with PLACES variables (40 measures)
 - Catalog version bumped to **v1.6.0**
 - Documentation updated with PLACES workflow examples
 

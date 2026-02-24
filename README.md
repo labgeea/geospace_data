@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.4.0  
+**Version:** 1.6.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -139,6 +139,12 @@ geospace/
 │   ├── coi_process_generic.py
 │   ├── coi_process_generic.sh
 │   └── coi_README.md
+├── places/                       # PLACES data tools
+│   ├── places_download_generic.py
+│   ├── places_download_generic.sh
+│   ├── places_process_generic.py
+│   ├── places_process_generic.sh
+│   └── places_README.md
 ```
 
 ## Versioning
@@ -175,6 +181,6 @@ This framework is released under the Public Domain license. Individual component
 
 ---
 
-**Current Version:** 1.4.0  
-**Last Updated:** October 2025  
+**Current Version:** 1.6.0  
+**Last Updated:** January 2026  
 **Framework Status:** Stable Release

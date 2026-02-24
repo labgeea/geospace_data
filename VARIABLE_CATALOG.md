@@ -15,7 +15,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **AQS**    | 6 variables | 31km | Hourly | US Environmental Protection Agency (EPA) |
 | **SVI**    | 20+ variables | Census Tract | 2000-2022 (Bi-annual) | CDC / ATSDR |
 | **COI**    | 20+ variables | Census Tract | 2012-2023 (Annual) | Child Opportunity Project |
-| **PLACES** | 30 variables | ZCTA | 2020-2025 (Annual) | CDC PLACES |
+| **PLACES** | 40 variables | ZCTA | 2020-2025 (Annual) | CDC PLACES |
 
 ---
 
@@ -240,5 +240,15 @@ CDC PLACES provides small-area estimates for health outcomes, prevention, and ri
 | **disability_vision_pct** | Vision disability | ZCTA | Annual | `disability_vision_pct` |
 | **disability_selfcare_pct** | Self-care disability | ZCTA | Annual | `disability_selfcare_pct` |
 | **disability_independent_pct** | Independent living disability | ZCTA | Annual | `disability_independent_pct` |
+
+### Health-Related Social Needs
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **food_insecurity_pct** | Food insecurity among adults | ZCTA | Annual | `food_insecurity_pct` |
+| **housing_insecurity_pct** | Housing insecurity among adults | ZCTA | Annual | `housing_insecurity_pct` |
+| **transport_barrier_pct** | Transportation barriers among adults | ZCTA | Annual | `transport_barrier_pct` |
+| **utility_insecurity_pct** | Utility service threat among adults | ZCTA | Annual | `utility_insecurity_pct` |
+| **social_support_lack_pct** | Lack of social and emotional support | ZCTA | Annual | `social_support_lack_pct` |
 
 *For detailed usage and configuration options, see module-specific README files.*
