@@ -5,8 +5,8 @@
 # This script wraps places_download_generic.py for convenient shell usage.
 #
 # Usage:
-#   ./places_download_generic.sh --year 2024 --output-dir ./data/places/
-#   ./places_download_generic.sh --year 2024 --output-dir ./data/places/ --state CA
+#   ./places_download_generic.sh --year 2025 --output-dir ./data/places/
+#   ./places_download_generic.sh --year 2025 --geo-level county --output-dir ./data/places/
 #
 # Requirements:
 #   - Python 3.8+ with requests, pandas

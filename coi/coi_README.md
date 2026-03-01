@@ -45,3 +45,7 @@ Key variables included (names subject to version of COI data):
 - `z_COI_nat`: Overall COI z-score (National)
 - `c5_COI_nat`: Overall COI quintile (National)
 - Domain specific scores (`ED`=Education, `HE`=Health/Environment, `SE`=Social/Economic)
+
+
+Notes (for Zenodo metadata for COI upload):
+COI - Child Opportunity Index (36 variables) Multi-scalar opportunity metrics including Z-scores, quintiles, and ranks for National, State, and Metro norms across Education, Health/Environment, and Social/Economic domains. 

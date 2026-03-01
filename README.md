@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.7.0  
+**Version:** 1.8.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -61,6 +61,8 @@ cd aqs/
 | **COI** | Child Opportunity Index data | 1.0.0 | [coi/coi_README.md](coi/coi_README.md) |
 | **PLACES** | CDC PLACES health outcomes and prevention data | 1.0.0 | [places/places_README.md](places/places_README.md) |
 | **FIRMS** | NASA FIRMS active fire data | 1.0.0 | [firms/firms_README.md](firms/firms_README.md) |
+| **STORMS** | NOAA Storm Events Database | 1.0.0 | [storms/storms_README.md](storms/storms_README.md) |
+| **WILDFIRE_SMOKE** | Stanford Smoke PM2.5 Reanalysis | 1.0.0 | [wildfire_pm/wildfire_pm_README.md](wildfire_pm/wildfire_pm_README.md) |
 
 ## Installation
 
@@ -152,6 +154,18 @@ geospace/
 │   ├── firms_process_generic.py
 │   ├── firms_process_generic.sh
 │   └── firms_README.md
+├── storms/                       # STORMS data tools
+│   ├── storms_download_generic.py
+│   ├── storms_download_generic.sh
+│   ├── storms_process_generic.py
+│   ├── storms_process_generic.sh
+│   └── storms_README.md
+├── wildfire_pm/               # Wildfire PM data tools
+│   ├── wildfire_pm_download_generic.py
+│   ├── wildfire_pm_download_generic.sh
+│   ├── wildfire_pm_process_generic.py
+│   ├── wildfire_pm_process_generic.sh
+│   └── wildfire_pm_README.md
 ├── catalog/                      # Metadata catalog tools
 │   ├── convert_catalog.py
 │   └── CATALOG_README.md
@@ -191,6 +205,6 @@ This framework is released under the Public Domain license. Individual component
 
 ---
 
-**Current Version:** 1.7.0  
+**Current Version:** 1.8.0  
 **Last Updated:** February 2026  
 **Framework Status:** Stable Release

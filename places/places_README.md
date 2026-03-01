@@ -5,11 +5,10 @@
 **Last Updated:** January 2026  
 **Framework Compatibility:** GEOSPACE v1.5.0+
 
-This module downloads and processes CDC PLACES data by merging health outcome estimates with ZCTA (ZIP Code Tabulation Area) geometries to create spatially-enabled datasets (GeoPackage).
+This module downloads and processes CDC PLACES data at multiple geographic levels (County, Place, Census Tract, ZCTA) and optionally merges with geometries to create spatially-enabled datasets (GeoPackage).
 
-## Overview
-
-The PLACES module provides small-area estimates for chronic disease measures, health risk behaviors, prevention practices, and social determinants of health. Data is available at the ZCTA level for the entire United States.
+> [!IMPORTANT]
+> **Release Year ≠ Data Year.** The `--year` argument selects the CDC PLACES *release* year. The `Year` column in downloaded CSVs reflects the BRFSS survey data vintage, which typically lags 2-4 years behind the release. See the table below.
 
 ### Data Source
 
@@ -17,9 +16,21 @@ The PLACES module provides small-area estimates for chronic disease measures, he
 - **Portal**: [CDC PLACES Data Portal](https://www.cdc.gov/places/tools/data-portal.html)
 - **API**: [Socrata Open Data API](https://data.cdc.gov/browse?category=500+Cities+%26+Places)
 
-## Supported Years
+## Supported Releases
 
-- 2020, 2021, 2022, 2023, 2024, 2025
+Each release is available at up to four geographic levels. Use `--geo-level` to select.
+
+| Release | BRFSS Data | County | Place | Tract | ZCTA |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 2025 | 2022-2023 | ✓ | ✓ | ✓ | ✓ |
+| 2024 | 2021-2022 | ✓ | ✓ | ✓ | — |
+| 2023 | 2020-2021 | ✓ | ✓ | ✓ | ✓ |
+| 2022 | 2019-2020 | ✓ | ✓ | ✓ | ✓ |
+| 2021 | 2018-2019 | ✓ | ✓ | ✓ | ✓ |
+| 2020 | 2017-2018 | ✓ | ✓ | ✓ | ✓ |
+
+> [!NOTE]
+> The 2024 release does not include a ZCTA-level dataset.
 
 ## Measure Categories
 
@@ -44,20 +55,22 @@ The PLACES module provides small-area estimates for chronic disease measures, he
 ### Step 1: Download Data
 
 ```bash
-# Download 2024 data
-./places_download_generic.sh --year 2024 --output-dir ./data/places/
+# Download 2025 ZCTA data (default geo level)
+./places_download_generic.sh --year 2025 --output-dir ./data/places/
 
-# Download all available years
-for year in 2020 2021 2022 2023 2024 2025; do
-  ./places_download_generic.sh --year $year --output-dir ./data/places/
-done
+# Download 2024 county data
+./places_download_generic.sh --year 2024 --geo-level county --output-dir ./data/places/
+
+# Download 2023 census tract data
+./places_download_generic.sh --year 2023 --geo-level tract --output-dir ./data/places/
 ```
 
 #### Download Arguments
 
 | Argument | Required | Description |
 |----------|----------|-------------|
-| `--year` | Yes | Release year (2020-2025) |
+| `--year` | Yes | Release year (2020-2025). See table above for corresponding data years |
+| `--geo-level` | No | Geographic level: `county`, `place`, `tract`, `zcta` (default: `zcta`) |
 | `--output-dir` | Yes | Directory to save downloaded CSV |
 | `--force` | No | Overwrite existing files |
 
@@ -86,8 +99,9 @@ done
 
 | File | Description |
 |------|-------------|
-| `PLACES_{year}_ZCTA_wide.csv` | Wide-format tabular data (one row per ZCTA) |
-| `PLACES_{year}_ZCTA_Spatial.gpkg` | GeoPackage with ZCTA polygons and PLACES attributes |
+| `places_{geo}_{year}.csv` | Raw downloaded CSV (one row per measure × geography) |
+| `PLACES_{year}_{GEO}_wide.csv` | Wide-format tabular data (one row per geography unit) |
+| `PLACES_{year}_{GEO}_Spatial.gpkg` | GeoPackage with geometry and PLACES attributes |
 
 ### Variable Naming Convention
 
@@ -107,6 +121,7 @@ For each measure, confidence interval columns are also included:
 ## Notes
 
 - PLACES uses model-based small area estimation (SAE) techniques applied to BRFSS data
+- The `Year` column in downloaded CSVs reflects the BRFSS survey year, **not** the release year
 - Data is typically released annually in Q4/Q1
 - ZCTA geometries are based on 2020 Census boundaries
 - See [PLACES Methodology](https://www.cdc.gov/places/methodology/index.html) for technical details
