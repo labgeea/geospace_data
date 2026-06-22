@@ -7,15 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- New **WILDFIRE_SMOKE** module (v1.0.0)
-  - Target dataset: Stanford Childs et al. (2022) Smoke PM2.5 Reanalysis (10km, 2006-2020)
-  - Download script pulling canonical arrays from Harvard Dataverse
-  - Parallel processing script filling structural 0s to create dense Parquet arrays
 ### Changed
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
+
+## [1.9.0] - 2026-06-22
+### Added
+- New **PRISM** (Parameter-elevation Regressions on Independent Slopes Model) module (v1.0.0)
+  - Download script (`prism_download_generic.py`) using PRISM Web Service API
+    - URL construction logic ported directly from amadeus R package
+    - Supports all 11 PRISM elements: `ppt`, `tmin`, `tmax`, `tmean`, `tdmean`, `vpdmin`, `vpdmax`, `solslope`, `soltotal`, `solclear`, `soltrans`
+    - Three data types: `ts` (daily/monthly/annual 4km), `normals_800` (800m normals), `normals` (4km normals)
+    - Flexible time strings: YYYYMMDD, YYYYMM, YYYY (time series) or MM, MMDD, 14 (normals)
+    - Automatic zip extraction and retry logic with exponential back-off
+    - Multi-element and multi-time batch downloads
+  - Processing script (`prism_process_generic.py`)
+    - Handles BIL, ASC, and NetCDF input formats
+    - Reprojects to EPSG:5070 (CONUS Albers) with bilinear resampling
+    - Cloud-Optimised GeoTIFF output (LZW, tiled 512×512, float32)
+    - Per-element valid-range validation with nodata masking
+    - JSON processing report generated per run
+  - Shell wrappers with colored output, prerequisite checks, and connectivity tests
+  - Module README with full element catalog, time format guide, and usage examples
+
+### Changed
+- Updated **VARIABLE_CATALOG.md** with PRISM variables (11 variables: 7 time series + 4 normals-only)
+- Catalog version bumped to **v1.9.0**
+- Framework now includes 12 modules
 
 ## [1.8.0] - 2026-01-26
 ### Added

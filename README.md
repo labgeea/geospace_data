@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.8.0  
+**Version:** 1.9.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -63,6 +63,7 @@ cd aqs/
 | **FIRMS** | NASA FIRMS active fire data | 1.0.0 | [firms/firms_README.md](firms/firms_README.md) |
 | **STORMS** | NOAA Storm Events Database | 1.0.0 | [storms/storms_README.md](storms/storms_README.md) |
 | **WILDFIRE_SMOKE** | Stanford Smoke PM2.5 Reanalysis | 1.0.0 | [wildfire_pm/wildfire_pm_README.md](wildfire_pm/wildfire_pm_README.md) |
+| **PRISM** | PRISM gridded climate data (4km/800m, 1895–present) | 1.0.0 | [prism/prism_README.md](prism/prism_README.md) |
 
 ## Installation
 
@@ -166,6 +167,12 @@ geospace/
 │   ├── wildfire_pm_process_generic.py
 │   ├── wildfire_pm_process_generic.sh
 │   └── wildfire_pm_README.md
+├── prism/                        # PRISM climate data tools
+│   ├── prism_download_generic.py
+│   ├── prism_download_generic.sh
+│   ├── prism_process_generic.py
+│   ├── prism_process_generic.sh
+│   └── prism_README.md
 ├── catalog/                      # Metadata catalog tools
 │   ├── convert_catalog.py
 │   └── CATALOG_README.md
@@ -205,6 +212,6 @@ This framework is released under the Public Domain license. Individual component
 
 ---
 
-**Current Version:** 1.8.0  
-**Last Updated:** February 2026  
+**Current Version:** 1.9.0  
+**Last Updated:** June 2026  
 **Framework Status:** Stable Release
