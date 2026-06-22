@@ -1,6 +1,6 @@
 # GEOSPACE Variable Catalog
 
-**Version:** 1.8.0 | **Last Updated:** January 26, 2026
+**Version:** 1.9.0 | **Last Updated:** June 22, 2026
 
 Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
@@ -19,6 +19,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **FIRMS** | 6 variables | Point/Polygon | 2000-present (Daily) | NASA FIRMS |
 | **STORMS** | 10+ variables | Point/Polygon | 1950-present (Event) | NOAA NCEI |
 | **Wildfire PM** | 1 variable | 10km/County/Tract/ZCTA | 2006-2020 (Daily) | Stanford ECHO Lab |
+| **PRISM** | 11 variables | 4km / 800m | Daily/Monthly/Annual 1895–present | Oregon State University |
 
 ---
 
@@ -258,6 +259,36 @@ CDC PLACES provides small-area estimates for health outcomes, prevention, and ri
 
 ---
 
+## PRISM Variables
+
+PRISM (Parameter-elevation Regressions on Independent Slopes Model) gridded climate data from Oregon State University. Available as daily/monthly/annual time series (4km) or 30-year normals (4km or 800m).
+
+### Time Series Variables (daily / monthly / annual)
+
+| Variable | Description | Units | Resolution | Temporal | Script Alias |
+|----------|-------------|-------|------------|----------|--------------|
+| **ppt** | Precipitation | mm | 4km | Daily/Monthly/Annual | `ppt` |
+| **tmin** | Minimum Temperature | °C | 4km | Daily/Monthly/Annual | `tmin` |
+| **tmax** | Maximum Temperature | °C | 4km | Daily/Monthly/Annual | `tmax` |
+| **tmean** | Mean Temperature | °C | 4km | Daily/Monthly/Annual | `tmean` |
+| **tdmean** | Mean Dew Point Temperature | °C | 4km | Daily/Monthly/Annual | `tdmean` |
+| **vpdmin** | Minimum Vapor Pressure Deficit | hPa | 4km | Daily/Monthly/Annual | `vpdmin` |
+| **vpdmax** | Maximum Vapor Pressure Deficit | hPa | 4km | Daily/Monthly/Annual | `vpdmax` |
+
+### Normals-Only Variables (30-year means)
+
+| Variable | Description | Units | Resolution | Temporal | Script Alias |
+|----------|-------------|-------|------------|----------|--------------|
+| **solslope** | Sloped-Surface Solar Radiation | W/m² | 4km / 800m | 30-yr normal | `solslope` |
+| **soltotal** | Total Global Shortwave Radiation on Slope | W/m² | 4km / 800m | 30-yr normal | `soltotal` |
+| **solclear** | Clearness Index | fraction (0–1) | 4km / 800m | 30-yr normal | `solclear` |
+| **soltrans** | Atmospheric Transmittance | fraction (0–1) | 4km / 800m | 30-yr normal | `soltrans` |
+
+---
+
+*For detailed usage and configuration options, see module-specific README files.*
+
+---
 ## FIRMS Variables
 
 NASA FIRMS active fire data. Raw data is point-based; processing can aggregate to polygons.
