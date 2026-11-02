@@ -9,8 +9,8 @@ Repeatable process for releasing a new module into the GEOSPACE framework. Follo
 ## Prerequisites
 
 - Module download and processing scripts are complete and tested on a feature branch
-- The `xarray-env` conda environment is available (`conda activate xarray-env`)
-- You have push access to `sandbox-msh/geospace_data` on GitHub
+- The `xarray-env` and `geospatial` conda environments are available
+- You have push access to `labgeea/geospace_data` on GitHub
 
 ## Step 0: Preflight
 
@@ -113,19 +113,19 @@ Domain,Dataset Name,Variable Description,Units,Source,Source URL,Source Document
 **Tips:**
 - Use a Python script to generate rows to avoid CSV formatting errors
 - Verify Source URL and Source Documentation URLs are correct and stable
+- `Download Script` and `Processing Script` must use the public `labgeea` repo, `blob/main`, and the `.sh` wrapper: `https://github.com/labgeea/geospace_data/blob/main/<module>/<prefix>_{download,process}_generic.sh` (never `sandbox-msh`, never a hardcoded `blob/vX.Y.Z`, and never `.py`)
 - `Dataset Name` format: `<MODULE> <variable_alias>` (e.g., `FIRMS fire_count`)
 
-**Verify** (from the repo root). This exits non-zero and lists the bad rows if any row doesn't have 27 columns or has a Domain outside the allowed list:
+**Verify** (from the repo root). This exits non-zero and lists the bad rows if any row doesn't have 27 columns, has a Domain outside the allowed list, or points to `sandbox-msh`:
 ```bash
-python3 -c "import csv,sys; A={'Built Environment','Weather','Air Quality'}; r=list(csv.reader(open('catalog/geospace_metadata_catalog.csv',newline='',encoding='utf-8-sig'))); bad=[(i,len(x),x[0] if x else '') for i,x in enumerate(r[1:],1) if len(x)!=27 or x[0] not in A]; print(f'{len(r)-1} rows, header has {len(r[0])} columns, {len(bad)} bad'); [print(f'row {i}: {n} columns, Domain={d!r}') for i,n,d in bad]; sys.exit(1 if bad or len(r[0])!=27 else 0)"
+python3 -c "import csv,sys; A={'Built Environment','Weather','Air Quality'}; r=list(csv.reader(open('catalog/geospace_metadata_catalog.csv',newline='',encoding='utf-8-sig'))); bad=[(i,len(x),x[0] if x else '') for i,x in enumerate(r[1:],1) if len(x)!=27 or x[0] not in A or 'sandbox-msh' in ','.join(x)]; print(f'{len(r)-1} rows, header has {len(r[0])} columns, {len(bad)} bad'); [print(f'row {i}: {n} columns, Domain={d!r}') for i,n,d in bad]; sys.exit(1 if bad or len(r[0])!=27 else 0)"
 ```
 
 ## Step 8: Generate Excel Catalog
 
 // turbo
 ```bash
-cd catalog/
-python3 convert_catalog.py
+conda run -n geospatial --cwd catalog python3 convert_catalog.py
 ```
 
 This produces `geospace_metadata_catalog_v<VERSION>.xlsx` for Zenodo.
@@ -191,7 +191,7 @@ What's New in v<VERSION>
 - Full Dataset Coverage
   - <List all modules with variable counts, mark new one as NEW>
 
-- Full Changelog: https://github.com/sandbox-msh/geospace_data/compare/v<PREV>...v<VERSION>
+- Full Changelog: https://github.com/labgeea/geospace_data/compare/v<PREV>...v<VERSION>
 ```
 
 ## Step 12: Draft Zenodo Entry
