@@ -45,7 +45,7 @@ Each release is available at up to four geographic levels. Use `--geo-level` to 
 
 ## Requirements
 
-- **Python Environment**: `geospatial` or equivalent with:
+- **Python Environment**: `xarray-env` or equivalent with:
   - `pandas`, `geopandas`, `pygris`, `requests`
   - `pyogrio` or `fiona` (for reading shapefiles)
 - **Internet Connection**: Required for data download and geometry fetching

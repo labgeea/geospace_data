@@ -25,9 +25,9 @@ The dataset must contain variables that represent components of the human exposo
 
 - **Natural hazard events:** Acute environmental events (wildfires, storms, floods) and their measurable characteristics (intensity, frequency, duration, spatial extent) that represent episodic exposures with health consequences.
 
-A dataset does not need to represent a direct chemical or physical agent to qualify. Under the exposome framework, the determination of whether a specific variable functions as an exposure, outcome, covariate, or effect modifier is made by the downstream researcher in the context of their study design — not by the data catalog.
+<!-- A dataset does not need to represent a direct chemical or physical agent to qualify. Under the exposome framework, the determination of whether a specific variable functions as an exposure, outcome, covariate, or effect modifier is made by the downstream researcher in the context of their study design — not by the data catalog. -->
 
-> **Rationale:** The exposome framework (Wild, 2005) recognizes that health is shaped by the full spectrum of environmental conditions — from air pollution to neighborhood deprivation to green space access. Restricting "exposure" to the classical toxicological definition (a measurable agent contacting a biological receptor) would exclude social and structural determinants that are widely used in contemporary environmental epidemiology, public health, and pediatric health research. GEOSPACE explicitly serves this broader research community.
+<!-- > **Rationale:** The exposome framework (Wild, 2005) recognizes that health is shaped by the full spectrum of environmental conditions — from air pollution to neighborhood deprivation to green space access. Restricting "exposure" to the classical toxicological definition (a measurable agent contacting a biological receptor) would exclude social and structural determinants that are widely used in contemporary environmental epidemiology, public health, and pediatric health research. GEOSPACE explicitly serves this broader research community. -->
 
 ---
 

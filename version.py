@@ -4,7 +4,7 @@ GEOSPACE Framework Version Management
 Central version file for all modules
 """
 
-__version__ = "1.9.0"
+__version__ = "1.10.0"
 __author__ = "GEOSPACE Project"
 __license__ = "Public Domain"
 __description__ = "Comprehensive framework for downloading and processing satellite and climate data"
@@ -22,6 +22,7 @@ FIRMS_VERSION = "1.0.0"
 STORMS_VERSION = "1.0.0"
 WILDFIRE_PM_VERSION = "1.0.0"
 PRISM_VERSION = "1.0.0"
+PM25_COMPONENTS_HARVARD_VERSION = "1.0.0"
 
 # Version info
 VERSION_INFO = {
@@ -38,7 +39,8 @@ VERSION_INFO = {
         "firms": FIRMS_VERSION,
         "storms": STORMS_VERSION,
         "wildfire_pm": WILDFIRE_PM_VERSION,
-        "prism": PRISM_VERSION
+        "prism": PRISM_VERSION,
+        "pm25_components_harvard": PM25_COMPONENTS_HARVARD_VERSION
     },
     "description": __description__,
     "author": __author__,

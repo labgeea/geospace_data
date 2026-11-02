@@ -126,7 +126,7 @@ def validate_csv(df):
     """Validate the CSV data for completeness."""
     
     required_columns = [
-        'Domain', 'Dataset Name', 'Variable Names', 'Source', 
+        'Domain', 'Dataset Name', 'Variable Description', 'Source', 
         'Download Script', 'Processing Script'
     ]
     

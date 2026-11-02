@@ -1,6 +1,6 @@
 # GEOSPACE Variable Catalog
 
-**Version:** 1.9.0 | **Last Updated:** June 22, 2026
+**Version:** 1.10.0 | **Last Updated:** November 2, 2026
 
 Quick reference catalog of all variables supported by the GEOSPACE Framework.
 
@@ -20,6 +20,7 @@ Quick reference catalog of all variables supported by the GEOSPACE Framework.
 | **STORMS** | 10+ variables | Point/Polygon | 1950-present (Event) | NOAA NCEI |
 | **Wildfire PM** | 1 variable | 10km/County/Tract/ZCTA | 2006-2020 (Daily) | Stanford ECHO Lab |
 | **PRISM** | 11 variables | 4km / 800m | Daily/Monthly/Annual 1895–present | Oregon State University |
+| **PM2.5 Components (Harvard)** | 15 variables | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | 2000–2019 (Annual) | Harvard Dataverse (NSAPH/CAFE) |
 
 ---
 
@@ -349,6 +350,37 @@ Stanford ECHO Lab wildfire smoke PM2.5 reanalysis (Childs et al. 2022). Daily es
 | Variable | Description | Resolution | Temporal | Script Alias |
 |----------|-------------|------------|----------|--------------|
 | **smokePM_pred** | Predicted daily wildfire smoke PM2.5 (µg/m³) | 10km/County/Tract/ZCTA | Daily | `smokePM_pred` |
+
+---
+
+## PM2.5 Components (Harvard) Variables
+
+Harvard T.H. Chan School of Public Health / NSAPH / CAFE super-learning ensemble model predictions of annual ambient $\text{PM}_{2.5}$ chemical components (`doi:10.7910/DVN/3H7DNP` and `doi:10.7910/DVN/F6PQAA`).
+
+### Major Components (µg/m³)
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **ec** | Annual mean ambient PM2.5 elemental carbon concentration (µg/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `ec` |
+| **nh4** | Annual mean ambient PM2.5 ammonium ion concentration (µg/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `nh4` |
+| **no3** | Annual mean ambient PM2.5 nitrate ion concentration (µg/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `no3` |
+| **oc** | Annual mean ambient PM2.5 organic carbon concentration (µg/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `oc` |
+| **so4** | Annual mean ambient PM2.5 sulfate ion concentration (µg/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `so4` |
+
+### Trace Elements (ng/m³)
+
+| Variable | Description | Resolution | Temporal | Script Alias |
+|----------|-------------|------------|----------|--------------|
+| **br** | Annual mean ambient PM2.5 bromine (bromium) concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `br` |
+| **ca** | Annual mean ambient PM2.5 calcium concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `ca` |
+| **cu** | Annual mean ambient PM2.5 copper concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `cu` |
+| **fe** | Annual mean ambient PM2.5 iron concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `fe` |
+| **k** | Annual mean ambient PM2.5 potassium concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `k` |
+| **ni** | Annual mean ambient PM2.5 nickel concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `ni` |
+| **pb** | Annual mean ambient PM2.5 lead concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `pb` |
+| **si** | Annual mean ambient PM2.5 silicon concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `si` |
+| **v** | Annual mean ambient PM2.5 vanadium concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `v` |
+| **zn** | Annual mean ambient PM2.5 zinc concentration (ng/m³) | 50m/1km Grid, State/County/Tract/ZCTA/Block Group/ZIP/Block | Annual | `zn` |
 
 ---
 

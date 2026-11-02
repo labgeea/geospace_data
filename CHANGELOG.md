@@ -13,6 +13,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Security
 
+## [1.10.0] - 2026-11-02
+### Added
+- New **PM2.5 Components (Harvard)** (`pm25_components_harvard`) module (v1.0.0)
+  - Download script (`pm25_components_download_generic.py`) for Harvard Dataverse super-learned annual PM2.5 chemical component predictions (2000–2019)
+    - Supports both gridded predictions (`doi:10.7910/DVN/3H7DNP`: 50-m urban & 1-km non-urban grids across 9 US Census divisions `NE1`–`P9`) and geography-aggregated predictions (`doi:10.7910/DVN/F6PQAA`: `state`, `county`, `tract`, `zcta`, `block_group`, `esri_zip`, `block`, `all_aggregated` with 2000 or 2010 Census boundaries)
+    - Supports 15 chemical components: 5 major (`ec`, `nh4`, `no3`, `oc`, `so4` in µg/m³) and 10 trace elements (`br`, `ca`, `cu`, `fe`, `k`, `ni`, `pb`, `si`, `v`, `zn` in ng/m³), grouped into `major`, `trace`, and `all` packages
+    - Automatic fallback to `.rds` archives for Mountain (`M8`) non-urban grid where plaintext `.dat` is absent upstream
+  - Processing script (`pm25_components_process_generic.py`)
+    - Repackages aggregated CSVs and joins gridded `.dat`/`.rds` prediction vectors with regional grid coordinates (`idx, lon, lat`) into annual Parquet files partitioned by geography and region
+    - Optional GeoPackage (`.gpkg`) export (`--output-format gpkg|both` or `--include-gpkg`) joined to US Census TIGER/Line boundaries via `pygris` (preserving TIGER CRS) or `EPSG:4326` point geometries for grids
+  - Shell wrappers (`pm25_components_download_generic.sh`, `pm25_components_process_generic.sh`) and comprehensive module documentation (`pm25_components_README.md`)
+
+### Changed
+- Updated **VARIABLE_CATALOG.md** with 15 Harvard PM2.5 component variables
+- Standardized **PRISM** metadata rows in `catalog/geospace_metadata_catalog.csv`
+- Updated environment references (`geospatial` → `xarray-env`) in `coi/coi_README.md` and `places/places_README.md`
+- Catalog version bumped to **v1.10.0** (205 total variables)
+- Framework now includes 13 modules
+
+### Fixed
+- Fixed required column check (`Variable Names` → `Variable Description`) in `catalog/convert_catalog.py`
+
 ## [1.9.0] - 2026-06-22
 ### Added
 - New **PRISM** (Parameter-elevation Regressions on Independent Slopes Model) module (v1.0.0)

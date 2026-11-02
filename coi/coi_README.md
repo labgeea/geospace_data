@@ -17,7 +17,7 @@ The COI module links tabular COI data (covering multiple years) to 2020 Census T
 
 ## Requirements
 
-- **Python Environment**: `geospatial` (or equivalent with `geopandas`, `pygris`, `pandas` installed)
+- **Python Environment**: `xarray-env` (or equivalent with `geopandas`, `pygris`, `pandas` installed)
 - **Data**: You must have the raw unified COI CSV file (e.g., `coi_tract_2k23.csv`). This can be downloaded from the [COI website](https://www.childopportunityindex.org/).
 
 ## Usage

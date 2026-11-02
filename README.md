@@ -1,6 +1,6 @@
 # GEOSPACE Geospatial Metadatabase Project
 
-**Version:** 1.9.0  
+**Version:** 1.10.0  
 **Author:** GEOSPACE Project  
 **License:** Public Domain
 
@@ -64,6 +64,7 @@ cd aqs/
 | **STORMS** | NOAA Storm Events Database | 1.0.0 | [storms/storms_README.md](storms/storms_README.md) |
 | **WILDFIRE_SMOKE** | Stanford Smoke PM2.5 Reanalysis | 1.0.0 | [wildfire_pm/wildfire_pm_README.md](wildfire_pm/wildfire_pm_README.md) |
 | **PRISM** | PRISM gridded climate data (4km/800m, 1895–present) | 1.0.0 | [prism/prism_README.md](prism/prism_README.md) |
+| **PM25_COMPONENTS_HARVARD** | Harvard super-learned annual PM2.5 chemical components (50m/1km grid & Census geographies, 2000–2019) | 1.0.0 | [pm25_components_harvard/pm25_components_README.md](pm25_components_harvard/pm25_components_README.md) |
 
 ## Installation
 
@@ -173,6 +174,12 @@ geospace/
 │   ├── prism_process_generic.py
 │   ├── prism_process_generic.sh
 │   └── prism_README.md
+├── pm25_components_harvard/      # Harvard PM2.5 components data tools
+│   ├── pm25_components_download_generic.py
+│   ├── pm25_components_download_generic.sh
+│   ├── pm25_components_process_generic.py
+│   ├── pm25_components_process_generic.sh
+│   └── pm25_components_README.md
 ├── catalog/                      # Metadata catalog tools
 │   ├── convert_catalog.py
 │   └── CATALOG_README.md
@@ -212,6 +219,6 @@ This framework is released under the Public Domain license. Individual component
 
 ---
 
-**Current Version:** 1.9.0  
-**Last Updated:** June 2026  
+**Current Version:** 1.10.0  
+**Last Updated:** November 2026  
 **Framework Status:** Stable Release
